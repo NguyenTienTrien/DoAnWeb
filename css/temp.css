@@ -1,0 +1,16 @@
+.logo {
+	font-size: 35px;
+
+}
+.brands-products1 li>a {
+	border: #ff0000 solid 2px;
+}
+.thumb{
+	 width: 473px;
+    height: 600px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
