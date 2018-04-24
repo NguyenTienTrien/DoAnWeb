@@ -14,3 +14,8 @@
     background-position: center center;
     background-size: cover;
 }
+.btn-group{
+	margin-left: 40%;
+	border: Black solid 1px;
+	margin-bottom: 20px;
+}
