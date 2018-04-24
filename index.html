@@ -15,6 +15,10 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
 	<link href="css/temp.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
+	<link href="css/dangky.css" rel="stylesheet">
+
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -24,6 +28,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head><!--/head-->
 
 <body>
@@ -65,8 +71,149 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-							  <li><a><em class="fa fa-user"></em> Tài Khoản</a></li>
-							  <li><a href="login.html"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
+							  <li><em class="fa fa-user"></em>
+								<!--form dang ky-->		
+							   
+								<button class="buttonLogin" onclick="document.getElementById('id00').style.display='block'" style="width:auto;">Đăng ký</button>
+
+								<div id="id00" class="container modal">
+						            <form class="form-horizontal" role="form">
+										
+										<!--Tao nut X-->
+						            	 <div class="imgcontainer">
+												      <span onclick="document.getElementById('id00').style.display='none'" class="close" title="Close Modal">&times;</span>
+												      <img src="images_temp/z4.jpg" alt="Avatar" class="avatar">
+										 </div>
+										 <!--tao xong nut X-->
+
+						                <h2>Registration Form</h2>
+
+						                <div class="form-group">
+						                    <label for="firstName" class="col-sm-3 control-label">Full Name</label>
+						                    <div class="col-sm-9">
+						                        <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus>
+						                        <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
+						                    </div>
+						                </div>
+						                <div class="form-group">
+						                    <label for="email" class="col-sm-3 control-label">Email</label>
+						                    <div class="col-sm-9">
+						                        <input type="email" id="email" placeholder="Email" class="form-control">
+						                    </div>
+						                </div>
+						                <div class="form-group">
+						                    <label for="password" class="col-sm-3 control-label">Password</label>
+						                    <div class="col-sm-9">
+						                        <input type="password" id="password" placeholder="Password" class="form-control">
+						                    </div>
+						                </div>
+						                <div class="form-group">
+						                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+						                    <div class="col-sm-9">
+						                        <input type="date" id="birthDate" class="form-control">
+						                    </div>
+						                </div>
+						                <div class="form-group">
+						                    <label for="country" class="col-sm-3 control-label">Country</label>
+						                    <div class="col-sm-9">
+						                        <select id="country" class="form-control">
+						                            <option>Viet Nam</option>
+						                            <option>Lao</option>
+						                            <option>Trung Quoc</option>
+						                            <option>Thai Lan</option>
+						                            <option>Nhat Ban</option>
+						                            <option>Campuchia</option>
+						                            <option>Anh</option>
+						                            <option>Han Quoc</option>
+						                        </select>
+						                    </div>
+						                </div> <!-- /.form-group -->
+						                <div class="form-group">
+						                    <label class="control-label col-sm-3">Gender</label>
+						                    <div class="col-sm-6">
+						                        <div class="row">
+						                            <div class="col-sm-4">
+						                                <label class="radio-inline">
+						                                    <input name="GioiTinh" type="radio" id="femaleRadio" value="Female">Female
+						                                </label>
+						                            </div>
+						                            <div class="col-sm-4">
+						                                <label class="radio-inline">
+						                                    <input name="GioiTinh" type="radio" id="maleRadio" value="Male">Male
+						                                </label>
+						                            </div>
+						                            <div class="col-sm-4">
+						                                <label class="radio-inline">
+						                                    <input name="GioiTinh" type="radio" id="uncknownRadio" value="Unknown">Unknown
+						                                </label>
+						                            </div>
+						                        </div>
+						                    </div>
+						                </div> <!-- /.form-group -->
+						                
+										
+										<div class="g-recaptcha" data-sitekey="6LewM1UUAAAAAPT5DlX1dUaQvLf0shCYkXvR6vod"></div>
+
+						                <div class="form-group">
+						                    <div class="col-sm-9 col-sm-offset-3">
+						                        <div class="checkbox">
+						                            <label>
+						                                <input type="checkbox">I accept <a href="#">terms</a>
+						                            </label>
+						                        </div>
+						                    </div>
+						                </div> <!-- /.form-group -->
+						                <div class="form-group">
+						                    <div class="col-sm-9 col-sm-offset-3">
+						                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+						                    </div>
+						                </div>
+						            </form> <!-- /form -->
+						        </div> <!-- ./container -->
+
+
+
+							   <!--ket thuc-->
+
+							</li>
+							  <li><i class="fa fa-lock"></i>
+
+									<!--Tao form dang nhap-->
+		
+								   
+									<button class="buttonLogin" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng nhập</button>
+
+									<div id="id01" class="modal">
+										  
+										  <form id="form-login" class="modal-content animate" action="#">
+										    <div class="imgcontainer">
+										      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+										      <img src="images_temp/z4.jpg" alt="Avatar" class="avatar">
+										    </div>
+
+										    <div class="containerLogin">
+										      <label for="uname"><b>Username</b></label>
+										      <input id="username" class="inputLogin" type="text" placeholder="Enter Username" name="uname" required>
+												
+										      <label for="psw"><b>Password</b></label>
+										      <input id="password1" class="inputLogin" type="password" placeholder="Enter Password" name="psw" required>
+										        
+										      <button class="buttonLogin"  type="submit">Login</button>
+										      <label>
+										        <input class="inputLogin" type="checkbox" checked="checked" name="remember"> Remember me
+										      </label>
+										    </div>
+
+										    <div class="container" style="background-color:#f1f1f1">
+										      <button   type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+										      <a href="#"><span class="psw"> Forgot password?</span></a>
+										    </div>
+										  </form>
+									</div>
+
+										<!--ket thuc-->
+
+							</li>
 							</ul>
 						</div>
 					</div>
@@ -583,12 +730,14 @@
 	</footer><!--/Footer-->
 	
 
-  
+	
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/price-range.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+
 </body>
 </html>
