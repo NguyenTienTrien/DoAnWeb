@@ -65,7 +65,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images_temp/backround.jpg" alt="" width="100" height="45"/><font size="5" color="red">ZERO4 BOOK</font></a>
+							<a href="index.html"><img class="iconz4" src="images_temp/z4.jpg" alt="" width="100" height="45"/><font size="5" color="red">&nbsp;&nbsp;ZERO4 BOOK</font></a>
 						</div>
 					</div>
 					<div class="col-sm-8">
@@ -188,6 +188,7 @@
 										  <form id="form-login" class="modal-content animate" action="#">
 										    <div class="imgcontainer">
 										      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+										      <h4>Vui lòng đăng nhập tài khoản</h4>
 										      <img src="images_temp/z4.jpg" alt="Avatar" class="avatar">
 										    </div>
 
@@ -259,7 +260,12 @@
 						</div>
 					</div>
 					<div class="col-sm-1.5">						<div class="search_box pull-right">
-							<button type="button" class="btn btn-warning">  <span class="glyphicon glyphicon-shopping-cart"></span>GIỎ HÀNG</button>
+							
+
+							<button class="btn btn-warning" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+								<span class="glyphicon glyphicon-shopping-cart"></span>
+							GIỎ HÀNG
+						</button>
 						</div>
 					</div>
 				</div>
@@ -302,7 +308,7 @@
 								<div class="col-sm-3">
 									<h1><span>Sách</span>-Tri Thức</h1>
 									<h2>Mang lại Tri Thức</h2>
-									<button type="button" class="btn btn-default get"> Mua Ngay</button>
+									<button class="btn btn-default" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Mua ngay</button>
 								</div>
 								<div class="col-sm-9">
 									<img src="images_temp/trithuc.jpg"  alt =" tri thuc" width="500"  height="473" > 
@@ -312,7 +318,7 @@
 								<div class="col-sm-3">
 								  	<h1><span>Sách</span>-Động Lực</h1>
 									<h2>Thúc Đẫy Động Lực Để Thành Công</h2>
-									<button type="button" class="btn btn-default get"> Mua Ngay</button>
+									<button class="btn btn-default" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Mua ngay</button>
 								</div>
 								<div class="col-sm-9">
 									<img src="images_temp/trithuc1.jpg" width="500" height="473">
@@ -323,7 +329,8 @@
 								<div class="col-sm-3 ">
 									<h1><span>Sách</span>-Tiểu Thuyết</h1>
 									<h2>Đưa Thế Giới Lại Gần Hơn</h2>
-									<button type="button" class="btn btn-default get"> Mua Ngay</button>
+									<button class="btn btn-default" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Mua ngay</button>
+									
 								</div>
 								<div class="col-sm-9">
 									<img src="images_temp/trithuc2.jpg" width="500" height="473">
@@ -421,8 +428,12 @@
 										<img src="images/SachMoi/anh1.jpg" alt="Ảnh Sách Bán Theo Loại" />
 												<h2>Giá:100.000VND</h2>
 												<p>SACH MOI NHAT</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+									<!--	<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a> -->
 										<!-- <button type="button" class="btn btn-default">Default Button</button> -->
+
+												<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+
+
 									</div>
 							  </div>
 								<div class="choose">
@@ -440,7 +451,7 @@
 										<img src="images/SachMoi/anh2.jpg" alt="Ảnh Sách Bán Theo Loại" />
 												<h2>Giá:100.000VND</h2>
 												<p>SACH MOI NHAT</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 								</div>
 								<div class="choose">
@@ -458,7 +469,7 @@
 										<img src="images/SachMoi/anh3.jpg" alt="Ảnh Sách Bán Theo Loại" />
 												<h2>Giá:100.000VND</h2>
 												<p>SACH MOI NHAT</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 								</div>
 								<div class="choose">
@@ -476,7 +487,7 @@
 										<img src="images/SachMoi/anh4.jpg" alt="Ảnh Sách Bán Theo Loại" />
 												<h2>Giá:100.000VND</h2>
 												<p>SACH MOI NHAT</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 									<img src="images/home/new.png" class="new" alt="" />
 								</div>
@@ -496,7 +507,7 @@
 												<h2>Giá:100.000VND</h2>
 												<p>SACH MOI NHAT</p>
 										<!-- <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a> <--></-->
-										 <button type="button" class="btn btn-default"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 									<img src="images/home/sale.png" class="new" alt="" />
 								</div>
@@ -515,7 +526,7 @@
 										<img src="images/SachMoi/anh6.jpg" alt="Ảnh Sách Bán Theo Loại" />
 												<h2>Giá:100.000VND</h2>
 												<p>SACH MOI NHAT</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 								</div>
 								<div class="choose">
@@ -540,7 +551,7 @@
 										<img src="images/XemNhieu/anh1.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
 												<h2>Giá:100.000VND</h2>
 												<p>Xem nhiều nhất</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 							  </div>
 								<div class="choose">
@@ -558,7 +569,7 @@
 										<img src="images/XemNhieu/anh2.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
 												<h2>Giá:100.000VND</h2>
 												<p>Xem nhiều nhất</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 								</div>
 								<div class="choose">
@@ -576,7 +587,7 @@
 										<img src="images/XemNhieu/anh3.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
 												<h2>Giá:100.000VND</h2>
 												<p>Xem nhiều nhất</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 								</div>
 								<div class="choose">
@@ -594,7 +605,7 @@
 										<img src="images/XemNhieu/anh4.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
 												<h2>Giá:100.000VND</h2>
 												<p>Xem nhiều nhất</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 									<img src="images/home/new.png" class="new" alt="" />
 								</div>
@@ -613,7 +624,7 @@
 										<img src="images/XemNhieu/anh5.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
 												<h2>Giá:100.000VND</h2>
 												<p>Xem nhiều nhất</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 									<img src="images/home/sale.png" class="new" alt="" />
 								</div>
@@ -632,7 +643,7 @@
 										<img src="images/XemNhieu/anh6.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
 												<h2>Giá:100.000VND</h2>
 												<p>Xem nhiều nhất</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 								</div>
 								<div class="choose">
@@ -685,7 +696,7 @@
 													<img src="images/BanChay/anh1.jpg" alt="Ảnh Sách bán chạy" />
 													<h2>Giá:100.000VND</h2>
 													<p>Bán chạy nhất</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
 											</div>
@@ -698,7 +709,7 @@
 													<img src="images/NamCao/anh2.jpg" alt="ảnh bán chạy" />
 													<h2>Giá:120.000VND</h2>
 													<p>Bán chạy nhất </p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
 											</div>
@@ -711,7 +722,7 @@
 													<img src="images/NamCao/anh3.jpg" alt="Ảnh Sách bán chạy" />
 													<h2>Giá:100.000VND</h2>
 													<p>Bán chạy nhất</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
 											</div>
@@ -726,7 +737,7 @@
 													<img src="images/NamCao/anh4.jpg" alt="Ảnh Sách bán chạy" />
 													<h2>Giá:100.000VND</h2>
 													<p>Bán chạy nhất</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
 											</div>
@@ -739,7 +750,7 @@
 													<img src="images/NamCao/anh5.jpg" alt="Ảnh Sách bán chạy" />
 													<h2>Giá:100.000VND</h2>
 													<p>Bán chạy nhất</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
 											</div>
@@ -752,7 +763,7 @@
 													<img src="images/NamCao/anh6.jpg" alt="Ảnh Sách bán chạy" />
 													<h2>Giá:100.000VND</h2>
 													<p>Bán chạy nhất</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
 											</div>

@@ -1,5 +1,7 @@
 var  user_temp = 'admin';
 var pass_temp = '123';
+var user_temp2='user';
+var pass_temp2='321';
 
 var inputUsername= document.getElementById('username');
 var inputPassword= document.getElementById('password1');
@@ -21,8 +23,11 @@ if(formLogin.attachEvent)
 		
 		var user=inputUsername.value;
 		var pass=inputPassword.value;
-		if(user==user_temp && pass==pass_temp)
+		if((user==user_temp && pass==pass_temp)||(user==user_temp2 && pass==pass_temp2))
 		{
+			
+			
+			window.open('admin.html');
 			alert('Đăng nhập thành công');
 		
 		}
