@@ -34,7 +34,7 @@ if(formLogin.attachEvent)
 		if(user==user_temp2 && pass==pass_temp2)
 		{
 			window.open('user.html');
-			window.close('index.html');
+			
 		}
 		else
 		{

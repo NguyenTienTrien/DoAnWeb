@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,12 +18,9 @@
 	<link href="css/temp.css" rel="stylesheet">
 	<link href="css/login.css" rel="stylesheet">
 	<link href="css/dangky.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/sanpham.css">
-	<link href="css/LoaiSach.css" rel="stylesheet">
+
+		<link href="css/LoaiSach.css" rel="stylesheet">
 	<link href="css/sanpham.css" rel="stylesheet">
-
-	
-
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -69,158 +67,27 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img class="iconz4" src="images_temp/backround.jpg" alt="" width="100" height="45"/><font size="5" color="red">&nbsp;&nbsp;ZERO4 BOOK</font></a>
+							<a href="index.html"><img src="images_temp/backround.jpg" alt="" width="100" height="45"/><font size="5" color="red">ZERO4 BOOK</font></a>
 						</div>
 					</div>
 					<div class="col-sm-8">
-						<div class="shop-menu pull-right">
-							<ul class="nav navbar-nav">
-							  <li><em class="fa fa-user"></em>
-								<!--form dang ky-->		
-							   
-								<button class="buttonLogin" onclick="document.getElementById('id00').style.display='block'" style="width:auto;">Đăng ký</button>
-
-								<div id="id00" class="container modal">
-						            <form class="form-horizontal" role="form">
-										
-										<!--Tao nut X-->
-						            	 <div class="imgcontainer">
-												      <span onclick="document.getElementById('id00').style.display='none'" class="close" title="Close Modal">&times;</span>
-												      <img src="images_temp/z4.jpg" alt="Avatar" class="avatar">
-										 </div>
-										 <!--tao xong nut X-->
-
-						                <h2>Registration Form</h2>
-
-						                <div class="form-group">
-						                    <label for="firstName" class="col-sm-3 control-label">Full Name</label>
-						                    <div class="col-sm-9">
-						                        <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus>
-						                        <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
-						                    </div>
-						                </div>
-						                <div class="form-group">
-						                    <label for="email" class="col-sm-3 control-label">Email</label>
-						                    <div class="col-sm-9">
-						                        <input type="email" id="email" placeholder="Email" class="form-control">
-						                    </div>
-						                </div>
-						                <div class="form-group">
-						                    <label for="password" class="col-sm-3 control-label">Password</label>
-						                    <div class="col-sm-9">
-						                        <input type="password" id="password" placeholder="Password" class="form-control">
-						                    </div>
-						                </div>
-						                <div class="form-group">
-						                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
-						                    <div class="col-sm-9">
-						                        <input type="date" id="birthDate" class="form-control">
-						                    </div>
-						                </div>
-						                <div class="form-group">
-						                    <label for="country" class="col-sm-3 control-label">Country</label>
-						                    <div class="col-sm-9">
-						                        <select id="country" class="form-control">
-						                            <option>Viet Nam</option>
-						                            <option>Lao</option>
-						                            <option>Trung Quoc</option>
-						                            <option>Thai Lan</option>
-						                            <option>Nhat Ban</option>
-						                            <option>Campuchia</option>
-						                            <option>Anh</option>
-						                            <option>Han Quoc</option>
-						                        </select>
-						                    </div>
-						                </div> <!-- /.form-group -->
-						                <div class="form-group">
-						                    <label class="control-label col-sm-3">Gender</label>
-						                    <div class="col-sm-6">
-						                        <div class="row">
-						                            <div class="col-sm-4">
-						                                <label class="radio-inline">
-						                                    <input name="GioiTinh" type="radio" id="femaleRadio" value="Female">Female
-						                                </label>
-						                            </div>
-						                            <div class="col-sm-4">
-						                                <label class="radio-inline">
-						                                    <input name="GioiTinh" type="radio" id="maleRadio" value="Male">Male
-						                                </label>
-						                            </div>
-						                            <div class="col-sm-4">
-						                                <label class="radio-inline">
-						                                    <input name="GioiTinh" type="radio" id="uncknownRadio" value="Unknown">Unknown
-						                                </label>
-						                            </div>
-						                        </div>
-						                    </div>
-						                </div> <!-- /.form-group -->
-						                
-										
-										<div class="g-recaptcha" data-sitekey="6LewM1UUAAAAAPT5DlX1dUaQvLf0shCYkXvR6vod"></div>
-
-						                <div class="form-group">
-						                    <div class="col-sm-9 col-sm-offset-3">
-						                        <div class="checkbox">
-						                            <label>
-						                                <input type="checkbox">I accept <a href="#">terms</a>
-						                            </label>
-						                        </div>
-						                    </div>
-						                </div> <!-- /.form-group -->
-						                <div class="form-group">
-						                    <div class="col-sm-9 col-sm-offset-3">
-						                        <button type="submit" class="btn btn-primary btn-block">Register</button>
-						                    </div>
-						                </div>
-						            </form> <!-- /form -->
-						        </div> <!-- ./container -->
-
-
-
-							   <!--ket thuc-->
-
-							</li>
-							  <li><i class="fa fa-lock"></i>
-
-									<!--Tao form dang nhap-->
-		
-								   
-									<button class="buttonLogin" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng nhập</button>
-
-									<div id="id01" class="modal">
-										  
-										  <form id="form-login" class="modal-content animate" action="#">
-										    <div class="imgcontainer">
-										      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-										      <h4>Vui lòng đăng nhập tài khoản</h4>
-										      <img src="images_temp/z4.jpg" alt="Avatar" class="avatar">
-										    </div>
-
-										    <div class="containerLogin">
-										      <label for="uname"><b>Username</b></label>
-										      <input id="username" class="inputLogin" type="text" placeholder="Enter Username" name="uname" required>
-												
-										      <label for="psw"><b>Password</b></label>
-										      <input id="password1" class="inputLogin" type="password" placeholder="Enter Password" name="psw" required>
-										        
-										      <button class="buttonLogin"  type="submit">Login</button>
-										      <label>
-										        <input class="inputLogin" type="checkbox" checked="checked" name="remember"> Remember me
-										      </label>
-										    </div>
-
-										    <div class="container" style="background-color:#f1f1f1">
-										      <button   type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-										      <a href="#"><span class="psw"> Forgot password?</span></a>
-										    </div>
-										  </form>
-									</div>
-
-										<!--ket thuc-->
-
-							</li>
-							</ul>
-						</div>
+						<!-- <div class="shop-menu pull-right"> -->
+							<div class="user pull-right"
+							<div class="dropdown">
+							    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><li><em class="fa fa-user"></em> 
+							    <span class="caret"></span></button>
+							    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+							    	<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#"><i class="glyphicon glyphicon-user"></i> User: Zero4'Group</a></li>
+							    	<li role="presentation" class="divider"></li>
+							      	<li role="presentation"><a role="menuitem" tabindex="-1" href="history.html">Lịch Sử</a></li>
+							     
+							      	<li role="presentation"><a role="menuitem" tabindex="-1" href="info.html">Thông tin cá nhân</a></li>
+							     	<li role="presentation" class="divider"></li>
+							      	<li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Đăng xuất</a></li>
+							    </ul>
+							  </div>
+					    </div>
+						<!-- </div> -->
 					</div>
 				</div>
 			</div>
@@ -259,23 +126,24 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Tìm kiếm"/>
+							<input type="text" placeholder="Tìm kiếm" id="Search"/>
 							 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 						</div>
+						<div class="btn-group">
+		                    <button type="button" id="SName" class="btn-default" onclick="SearchName()">  Tên </button>
+		                    <button type="button" id="SType" class="btn-default" onclick="SearchType()">  Loại  </button>
+		                    <button type="button" id="SAuthor" class="btn-default" onclick="SearchAuthor()"> Tác giả </button>
+               			</div>
 					</div>
 					<div class="col-sm-1.5">						<div class="search_box pull-right">
-							
-
-							<button class="btn btn-warning" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
-								<span class="glyphicon glyphicon-shopping-cart"></span>
-							GIỎ HÀNG
-						</button>
+							<button type="button" id="giohang" class="btn btn-warning" > <a href="giohang.html"> <span class="glyphicon glyphicon-shopping-cart"></span>[0] GIỎ HÀNG </a></button>
 						</div>
 					</div>
 				</div>
 				</div>
 			</div>
 	</header>
+	
 	
 	<section id="slider"><!--slider-->
 		<div class="container">
@@ -286,15 +154,15 @@
 							<h2>Danh Mục Sách </h2>
 							<div class="brands-name1">
 								<ul class="nav nav-pills nav-stacked">
-									<li><a href="NgoaiNgu.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span> Sách Ngoại Ngữ</a></li>
-									<li><a href="KinhTe.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span> Sách Blockchain</a></li>
-									<li><a href="KinhTe.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>Sách Kinh Tế</a></li>
-									<li><a href="NgoaiNgu.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span> Sách Văn Học Trong Nước</a></li>
-									<li><a href="KinhTe.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>Sách Văn Học Nước Ngoài</a></li>
-									<li><a href="NgoaiNgu.html">  <span class="pull-right "><span class="glyphicon glyphicon-chevron-right"></span></span>Sách Thiếu Nhi</a></li>
-									<li><a href="KinhTe.html"> <span class="pull-right "><span class="glyphicon glyphicon-chevron-right"></span></span> Sách Chuyên Ngành</a></li>
-									<li><a href="NgoaiNgu.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>Sách Giáo Khoa - Giáo Trình</a></li>
-									<li><a href="KinhTe.html">  <span class="pull-right "> <span class="glyphicon glyphicon-heart" > </span></span>  Sách Khác</a></li>
+									<li><a href="NgoaiNgu1.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span> Sách Ngoại Ngữ</a></li>
+									<li><a href="KinhTe1.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span> Sách Blockchain</a></li>
+									<li><a href="KinhTe1.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>Sách Kinh Tế</a></li>
+									<li><a href="NgoaiNgu1.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span> Sách Văn Học Trong Nước</a></li>
+									<li><a href="KinhTe1.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>Sách Văn Học Nước Ngoài</a></li>
+									<li><a href="NgoaiNgu1.html">  <span class="pull-right "><span class="glyphicon glyphicon-chevron-right"></span></span>Sách Thiếu Nhi</a></li>
+									<li><a href="KinhTe1.html"> <span class="pull-right "><span class="glyphicon glyphicon-chevron-right"></span></span> Sách Chuyên Ngành</a></li>
+									<li><a href="NgoaiNgu1.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>Sách Giáo Khoa - Giáo Trình</a></li>
+									<li><a href="KinhTe1.html">  <span class="pull-right "> <span class="glyphicon glyphicon-heart" > </span></span>  Sách Khác</a></li>
 								</ul>
 							</div>
 						</div><!--/brands_products-->
@@ -319,7 +187,7 @@
 							  </div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer1.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -340,7 +208,7 @@
 							  </div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -361,14 +229,13 @@
 							  </div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-
 					<div class="btn-toolbar pager" role="toolbar">
 						<ul class="pagination ">
 						  <li><a href="#">&laquo;</a></li>
@@ -380,7 +247,8 @@
 						  <li><a href="#">&raquo;</a></li>
 						</ul>
 					</div>
-			
+				
+			</div>
 		</div>
 	</section><!--/slider-->
 	
@@ -388,26 +256,24 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-2">
-
-				
+					<div class="left-sidebar">
 					<div class="brands-products1"><!--brands_products-->
 							<h2>Nhà Sản Xuất </h2>
 							<div class="brands-name1">
 								<ul class="nav nav-pills nav-stacked">
-									<li><a href="NXBKimDong.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>NXB Kim Đồng </a></li>
-									<li><a href="NXBLaoDong.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>NXB Trẻ </a></li>
-									<li><a href="NXBKimDong.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>NXB HCM</a></li>
-									<li><a href="NXBLaoDong.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>  NXB Hà Nội</a></li>
-									<li><a href="NXBKimDong.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>NXB Đà Nẵng </a></li>
-									<li><a href="NXBLaoDong.html">  <span class="pull-right "><span class="glyphicon glyphicon-chevron-right"></span></span>NXB Lao Động</a></li>
-									<li><a href="NXBKimDong.html"> <span class="pull-right "><span class="glyphicon glyphicon-chevron-right"></span></span> NXB Thanh Niên</a></li>
-									<li><a href="NXBLaoDong.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>NXB Hoa Học Trò</a></li>
-									<li><a href="NXBKimDong.html">  <span class="pull-right "> <span class="glyphicon glyphicon-heart" > </span></span> NXB Thiếu Nhi </a></li>
+									<li><a href="NXBKimDong1.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>NXB Kim Đồng </a></li>
+									<li><a href="NXBLaoDong1.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>NXB Trẻ </a></li>
+									<li><a href="NXBKimDong1.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>NXB HCM</a></li>
+									<li><a href="NXBLaoDong1.html"> <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>  NXB Hà Nội</a></li>
+									<li><a href="NXBKimDong1.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>NXB Đà Nẵng </a></li>
+									<li><a href="NXBLaoDong1.html">  <span class="pull-right "><span class="glyphicon glyphicon-chevron-right"></span></span>NXB Lao Động</a></li>
+									<li><a href="NXBKimDong1.html"> <span class="pull-right "><span class="glyphicon glyphicon-chevron-right"></span></span> NXB Thanh Niên</a></li>
+									<li><a href="NXBLaoDong1.html">  <span class="pull-right "> <span class="glyphicon glyphicon-chevron-right"></span></span>NXB Hoa Học Trò</a></li>
+									<li><a href="NXBKimDong1.html">  <span class="pull-right "> <span class="glyphicon glyphicon-heart" > </span></span> NXB Thiếu Nhi </a></li>
 								</ul>
 							</div>
 						</div><!--/brands_products-->
-				<br/>
-					<div class="left-sidebar">
+						<br/>
 						<div class="brands-products">
 						<h2>Giảm giá </h2>
 						<div class="shipping text-center"><!--shipping-->
@@ -458,19 +324,15 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/SachMoi/anh1.jpg" alt="Ảnh Sách Bán Theo Loại" />
-												<p>Digital gold</p>
-												<p>Giá:100.000 VNĐ</p>
-									<!--	<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a> -->
+												<h2>Giá:100.000VND</h2>
+												<p>SACH MOI NHAT</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 										<!-- <button type="button" class="btn btn-default">Default Button</button> -->
-
-												<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
-
-
 									</div>
 							  </div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -481,14 +343,14 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/SachMoi/anh2.jpg" alt="Ảnh Sách Bán Theo Loại" />
-												<p>Khởi nguồn một nền kinh tế mới</p>
-												<p>Giá:123.000 VNĐ</p>
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+												<h2>Giá:100.000VND</h2>
+												<p>SACH MOI NHAT</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 									</div>
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham1.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer1.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -499,14 +361,14 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/SachMoi/anh3.jpg" alt="Ảnh Sách Bán Theo Loại" />
-												<p>Nghệ thuật giữ chân nhân viên giỏi</p>
-												<p>Giá: 79.000 VNĐ</p>
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+												<h2>Giá:100.000VND</h2>
+												<p>SACH MOI NHAT</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 									</div>
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -517,15 +379,15 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/SachMoi/anh4.jpg" alt="Ảnh Sách Bán Theo Loại" />
-												<p>Tư duy chiến lược</p>
-												<p>Giá:68.000 VNĐ</p>
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+												<h2>Giá:100.000VND</h2>
+												<p>SACH MOI NHAT</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 									</div>
 									<img src="images/home/new.png" class="new" alt="" />
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham1.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -536,16 +398,16 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/SachMoi/anh5.jpg" alt="Ảnh Sách Bán Theo Loại" />
-												<p>Đảo giấu vàng</p>
-												<p>Giá:45.000 VNĐ</p>
+												<h2>Giá:100.000VND</h2>
+												<p>SACH MOI NHAT</p>
 										<!-- <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a> <--></-->
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+										 <button type="button" class="btn btn-default" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 									</div>
 									<img src="images/home/sale.png" class="new" alt="" />
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -556,14 +418,14 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/SachMoi/anh6.jpg" alt="Ảnh Sách Bán Theo Loại" />
-												<p>Yêu anh hơn cả tử thần</p>
-												<p>Giá:121.000 VNĐ</p>
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+												<h2>Giá:100.000VND</h2>
+												<p>SACH MOI NHAT</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 									</div>
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -581,14 +443,14 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/XemNhieu/anh1.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
-												<p>Mười vạn câu hỏi vì sao</p>
-												<p>Giá:123.000 VNĐ</p>
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+												<h2>Giá:100.000VND</h2>
+												<p>Xem nhiều nhất</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 									</div>
 							  </div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham1.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -599,14 +461,14 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/XemNhieu/anh2.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
-												<p>Cộng đồng khởi nghiệp</p>
-												<p>Giá:56.000 VNĐ</p>
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+												<h2>Giá:100.000VND</h2>
+												<p>Xem nhiều nhất</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 									</div>
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer1.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -617,14 +479,14 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/XemNhieu/anh3.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
-												<p>Code complete</p>
-												<p>Giá:143.000 VNĐ</p>
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+												<h2>Giá:100.000VND</h2>
+												<p>Xem nhiều nhất</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 									</div>
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -635,15 +497,15 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/XemNhieu/anh4.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
-												<p>Ngữ pháp tiếng anh</p>
-												<p>Giá:43.000 VNĐ</p>
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+												<h2>Giá:100.000VND</h2>
+												<p>Xem nhiều nhất</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 									</div>
 									<img src="images/home/new.png" class="new" alt="" />
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham1.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer1.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -654,15 +516,15 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/XemNhieu/anh5.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
-												<p>Lão hạc</p>
-												<p>Giá:90.000 VNĐ</p>
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+												<h2>Giá:100.000VND</h2>
+												<p>Xem nhiều nhất</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 									</div>
 									<img src="images/home/sale.png" class="new" alt="" />
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -673,14 +535,14 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="images/XemNhieu/anh6.jpg" alt="Ảnh Sách Bán Nhà Sản Xuất" />
-												<p>Chí Phèo</p>
-												<p>Giá:67.000 VNĐ</p>
-										<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+												<h2>Giá:100.000VND</h2>
+												<p>Xem nhiều nhất</p>
+										<a href="#" class="btn btn-default add-to-cart" onclick="AddSp()"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
 									</div>
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-									  <li><a href="sanpham2.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+									  <li><a href="sanphamer.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
 									  <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
 									</ul>
 								</div>
@@ -691,6 +553,7 @@
 					
 					
 
+					
 					<div class="btn-toolbar pager" role="toolbar">
 						<ul class="pagination ">
 						  <li><a href="#">&laquo;</a></li>
@@ -712,7 +575,7 @@
     					<button type="button" class="btn-group"><span class="glyphicon glyphicon-chevron-right"></span></button>
   					</div> -->
   					<br>
-  					
+  				
 					<div class="recommended_items"><!--recommended_items-->
 						<h2 class="title text-center"><font size="1" color="red">Bán Chạy Nhất</font></h2>
 						
@@ -724,9 +587,9 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<a href="sanpham.html"><img src="images/BanChay/anh1.jpg" alt="Ảnh Sách bán chạy" /></a>
-													<p>Đắc nhân tâm</p>
-													<p>Giá:90.000 VNĐ</p>
-													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
+													<h2>Giá:100.000VND</h2>
+													<p>Bán chạy nhất</p>
+													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i></button>
 												</div>
 												
 											</div>
@@ -737,8 +600,8 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<a href="sanpham1.html"><img src="images/NamCao/anh2.jpg" alt="ảnh bán chạy" /></a>
-													<p>Truyện ngắn Nam Cao</p>
-													<p>Giá:87.000 VNĐ</p>
+													<h2>Giá:120.000VND</h2>
+													<p>Bán chạy nhất </p>
 													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
@@ -750,8 +613,8 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<a href="sanpham2.html"><img src="images/NamCao/anh3.jpg" alt="Ảnh Sách bán chạy" /></a>
-													<p>Thơ Nguyễn Du</p>
-													<p>Giá:34.000 VNĐ</p>
+													<h2>Giá:100.000VND</h2>
+													<p>Bán chạy nhất</p>
 													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
@@ -765,8 +628,8 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<a href="sanpham.html"><img src="images/NamCao/anh4.jpg" alt="Ảnh Sách bán chạy" /></a>
-													<p>Hai khối tình</p>
-													<p>Giá:54.000 VNĐ</p>
+													<h2>Giá:100.000VND</h2>
+													<p>Bán chạy nhất</p>
 													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
@@ -778,8 +641,8 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<a href="sanpham.html"><img src="images/NamCao/anh5.jpg" alt="Ảnh Sách bán chạy" /></a>
-													<p>Tác phẩm, lời bình về Nam Cao</p>
-													<p>Giá:65.000 VNĐ</p>
+													<h2>Giá:100.000VND</h2>
+													<p>Bán chạy nhất</p>
 													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
@@ -791,8 +654,8 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<a href="sanpham2.html"><img src="images/NamCao/anh6.jpg" alt="Ảnh Sách bán chạy" /></a>
-													<p>Đời thừa</p>
-													<p>Giá:73.000 VNĐ</p>
+													<h2>Giá:100.000VND</h2>
+													<p>Bán chạy nhất</p>
 													<button class="btn btn-default add-to-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-plus-square"></i>Thêm vào giỏ</button>
 												</div>
 												
@@ -888,7 +751,7 @@
 			<div class="container">
 				<div class="row">
 					<p class="pull-left">Copyright © 2013 Zero4-Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Zero4 Group</a></span></p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">TrungNguyen</a></span></p>
 				</div>
 			</div>
 		</div>
@@ -904,5 +767,7 @@
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/giohang.js"></script>
 </body>
 </html>
