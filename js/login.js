@@ -23,13 +23,18 @@ if(formLogin.attachEvent)
 		
 		var user=inputUsername.value;
 		var pass=inputPassword.value;
-		if((user==user_temp && pass==pass_temp)||(user==user_temp2 && pass==pass_temp2))
+		if(user==user_temp && pass==pass_temp)
 		{
 			
 			
 			window.open('admin.html');
-			alert('Đăng nhập thành công');
+			
 		
+		}
+		if(user==user_temp2 && pass==pass_temp2)
+		{
+			window.open('user.html');
+			window.close('index.html');
 		}
 		else
 		{
