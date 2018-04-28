@@ -1,0 +1,87 @@
+.btnSp{
+	background-color: #4CAF50;
+    color: white;
+   
+}
+
+.btnSp2{
+	background-color: blue;
+    color: white;
+    
+}
+
+.anhsp{
+	width: 100%;
+}
+
+.anhsp2{
+	width: 95%;
+}
+.spAAA{
+	background-color: white;
+	padding: 0px;
+	text-align: left;
+}
+
+.spBBB{
+	position: relative;
+    padding: 15px;
+    float: left;
+    border-style: solid;
+    border-width: 2px;
+    border-color: green;
+    border-radius: 3px;
+    background-color: #ffffff;
+    width: 250px;
+    min-height: 210px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.spCCC{
+	font-size: 16px;
+}
+
+.giaban{
+	color: red;
+	font-size: 16px;
+}
+.benphai{
+	text-align: right;
+}
+.tietkiem{
+	font-size: 14px;
+	color: green;
+}
+.chinhgiua{
+	margin-left: 40px;
+}
+
+.PhanBody{
+	margin-top: 20px;
+
+}
+.cungloai{
+	    border-style: solid;
+    border-width: 2px;
+    border-color: green;
+    border-radius: 3px;
+}
+.cungloai1{
+	text-align: center;
+}
+
+.anhspcl{
+	width: 224px;
+	height: 224px;
+	
+}
+.spDDD{
+	font-size: 17px;
+	color: green;	
+}
+
+.spEEE{
+	margin-left: 100px;
+}

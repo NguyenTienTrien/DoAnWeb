@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<title>Admin</title>
+		<link type="text/css" rel="stylesheet" href="css/admin.css" />
+		<link type="text/css" rel="stylesheet" href="css/normalize.css" />
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/admin.js"></script>
+
+		
+
+	</head>
+	<body>
+		
+
+		
+
+			<div id="menu">
+				<ul>
+							<div  class="modalAd2">
+								<img class="iconz4AD2" src="images_temp/z4.jpg" alt="" width="2" height="45"/>
+								<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="btn-admin">Admin
+                    			</button>
+                    			<div><h2>Thống kê doanh thu</h2></div>
+								<div class="DoThiDoanhThu">	
+								<div id="piechart1"></div>
+
+								<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+										<script type="text/javascript">
+										// Load google charts
+										google.charts.load('current', {'packages':['corechart']});
+										google.charts.setOnLoadCallback(drawChart);
+
+										// Draw the chart and set the chart values
+										function drawChart() {
+										  var data = google.visualization.arrayToDataTable([
+										  ['Task', 'Hours per Day'],
+										  ['Tiểu thuyết', 7],
+										  ['Văn học', 3],
+										  ['Tạp chí', 3],
+										  ['Truyện cười', 4],
+										  ['Loại khác', 7]
+										]);
+
+										  // Optional; add a title and set the width and height of the chart
+										  var options = {'title':'Doanh thu theo loại sản phẩm quý 4 năm 2017', 'width':550, 'height':400};
+
+										  // Display the chart inside the <div> element with id="piechart"
+										  var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+										  chart.draw(data, options);
+									}
+								</script>
+							</div>
+
+							<div class="DoThiDoanhThu">	
+								<div id="DoThi1"></div>
+
+								<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+										<script type="text/javascript">
+										// Load google charts
+										google.charts.load('current', {'packages':['corechart']});
+										google.charts.setOnLoadCallback(drawChart);
+
+										// Draw the chart and set the chart values
+										function drawChart() {
+										  var data = google.visualization.arrayToDataTable([
+										  ['Task', 'Hours per Day'],
+										  ['Tiểu thuyết', 8],
+										  ['Văn học', 2],
+										  ['Tạp chí', 4],
+										  ['Truyện cười', 2],
+										  ['Loại khác', 8]
+										]);
+
+										  // Optional; add a title and set the width and height of the chart
+										  var options = {'title':'Doanh thu theo loại sản phẩm quý 1 năm 2018', 'width':550, 'height':400};
+
+										  // Display the chart inside the <div> element with id="piechart"
+										  var chart = new google.visualization.PieChart(document.getElementById('DoThi1'));
+										  chart.draw(data, options);
+									}
+								</script>
+							</div>	
+
+
+							</div>	
+
+
+
+						
+					<li><button class="btnAdmin" id="btn001">Thống kê</button>
+						<div id="001" class="modalAd">
+								<div>
+										<img class="iconz4AD2" src="images_temp/z4.jpg" alt="" width="2" height="45"/>
+								<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="btn-admin">Admin
+                    			</button>
+									<h1>Thống kê doanh thu</h1>
+
+									
+								</div>
+
+							<div class="DoThiDoanhThu">	
+								<div id="piechart"></div>
+
+								<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+										<script type="text/javascript">
+										// Load google charts
+										google.charts.load('current', {'packages':['corechart']});
+										google.charts.setOnLoadCallback(drawChart);
+
+										// Draw the chart and set the chart values
+										function drawChart() {
+										  var data = google.visualization.arrayToDataTable([
+										  ['Task', 'Hours per Day'],
+										  ['Tiểu thuyết', 7],
+										  ['Văn học', 3],
+										  ['Tạp chí', 3],
+										  ['Truyện cười', 4],
+										  ['Loại khác', 7]
+										]);
+
+										  // Optional; add a title and set the width and height of the chart
+										  var options = {'title':'Doanh thu theo loại sản phẩm quý 4 năm 2017', 'width':550, 'height':400};
+
+										  // Display the chart inside the <div> element with id="piechart"
+										  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+										  chart.draw(data, options);
+									}
+								</script>
+							</div>
+
+							<div class="DoThiDoanhThu">	
+								<div id="DoThi"></div>
+
+								<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+										<script type="text/javascript">
+										// Load google charts
+										google.charts.load('current', {'packages':['corechart']});
+										google.charts.setOnLoadCallback(drawChart);
+
+										// Draw the chart and set the chart values
+										function drawChart() {
+										  var data = google.visualization.arrayToDataTable([
+										  ['Task', 'Hours per Day'],
+										  ['Tiểu thuyết', 8],
+										  ['Văn học', 2],
+										  ['Tạp chí', 4],
+										  ['Truyện cười', 2],
+										  ['Loại khác', 8]
+										]);
+
+										  // Optional; add a title and set the width and height of the chart
+										  var options = {'title':'Doanh thu theo loại sản phẩm quý 1 năm 2018', 'width':550, 'height':400};
+
+										  // Display the chart inside the <div> element with id="piechart"
+										  var chart = new google.visualization.PieChart(document.getElementById('DoThi'));
+										  chart.draw(data, options);
+									}
+								</script>
+							</div>	
+
+
+
+						</div>
+						
+					</li><!--Thống kê end-->
+					<li>
+						<button class="btnAdmin" id="btn002">Sản phẩm</button>
+						<div id="002" class="modalAd">
+								 
+							<h3>
+								Tìm kiếm theo tên sản phẩm
+								<input class="TimKiem" type="text" name="tensp"placeholder="Tìm kiếm">
+								<button class="TimKiem" type="submit"><i class="fa fa-search"></i></button>
+								<img class="iconz4AD" src="images_temp/z4.jpg" alt="" width="2" height="45"/>
+								<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="btn-admin">Admin
+                    			</button>
+								
+							</h3>
+							<hr>
+								
+							<div>
+								<h4>Sắp xếp theo</h4>
+								<div>
+									<button>Áp dụng</button>
+									<div class="col-sm-3">
+						                        <select id="country">
+						                            <option>Mã sản phẩm</option>
+						                            <option>Tên sản phẩm</option>
+						                            <option>Tên tác giả</option>
+						                            <option>Tên nhà xuất bản</option>
+						                            <option>Giá tiền</option>
+						                            <option>Tên thể loại</option>
+						                           
+						                        </select>
+						            </div>
+								</div>
+
+								<!--
+								<div class="form-group">
+						                    <label for="country" class="col-sm-3 control-label">Country</label>
+						                    <div class="col-sm-9">
+						                        <select id="country" class="form-control">
+						                            <option>Viet Nam</option>
+						                            <option>Lao</option>
+						                            <option>Trung Quoc</option>
+						                            <option>Thai Lan</option>
+						                            <option>Nhat Ban</option>
+						                            <option>Campuchia</option>
+						                            <option>Anh</option>
+						                            <option>Han Quoc</option>
+						                        </select>
+						                    </div>
+						                </div>
+						            -->
+							</div><br>
+															<div class="YYyy">
+								<table class="table">
+								    <thead>
+								      <tr>
+								        <th>Mã sản phẩm</th>
+								        <th>Tên sản phẩm</th>
+								        <th>Giá</th>
+								        <th>Thể loại</th>
+								        <th>Tác giả</th>
+								        <th>Nhà sản xuất</th>
+								        <th>Chỉnh sửa</th>
+
+										
+
+
+
+								      </tr>
+								    </thead>
+								    <tbody>
+								      <tr>
+								        <td>1000</td>
+								        <td>Lão hạc</td>
+								        <td>25.000 VNĐ</td>
+								        <td>Văn học</td>
+								        <td>Nam Cao</td>
+								        <td>tp HCM</td>
+								        <td>
+											<span class="glyphicon glyphicon-plus"></span>
+
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>1001</td>
+								        <td>Sống mòn</td>
+								        <td>75.000 VNĐ</td>
+								        <td>Văn học</td>
+								        <td>Nam Cao</td>
+								        <td>Hà Nội</td>
+								        <td>
+											<span class="glyphicon glyphicon-plus"></span>
+
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>1002</td>
+								        <td>Đắc nhân tâm</td>
+								        <td>175.000 VNĐ</td>
+								        <td>Cuộc sống</td>
+								        <td>Dale Carnegie</td>
+								        <td>NXB Trẻ</td>
+								        <td>
+											<span class="glyphicon glyphicon-plus"></span>
+
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>1003</td>
+								        <td>Số đỏ</td>
+								        <td>98.000 VNĐ</td>
+								        <td>Văn học</td>
+								        <td>Vũ Trọng Phụng</td>
+								        <td>Đà nẵng</td>
+								        <td>
+											<span class="glyphicon glyphicon-plus"></span>
+
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>1004</td>
+								        <td>Chiếc lược ngà</td>
+								        <td>81.000 VNĐ</td>
+								        <td>Văn học</td>
+								        <td>Nguyễn Quang Sáng</td>
+								        <td>Huế</td>
+								        <td>
+											<span class="glyphicon glyphicon-plus"></span>
+
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+
+								    </tbody>
+								  </table>
+									
+								
+
+							</div>
+
+							
+
+						</div>
+
+					</li>
+					<li>
+							<button class="btnAdmin" id="btn003">Loại sản phẩm</button>
+						<div id="003" class="modalAd">
+								 
+							<h3>
+								Tìm kiếm theo loại sản phẩm
+								<input class="TimKiem" type="text" name="tensp"placeholder="Tìm kiếm">
+								<button class="TimKiem" type="submit"><i class="fa fa-search"></i></button>
+								<img class="iconz4AD" src="images_temp/z4.jpg" alt="" width="2" height="45"/>
+								<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="btn-admin">Admin
+                    			</button>
+								
+							</h3>
+							<hr>
+								
+							<div>
+								<h4>Sắp xếp theo</h4>
+								<div>
+									<button>Áp dụng</button>
+									<div class="col-sm-3">
+						                        <select id="country">
+						                            <option>Mã Loại</option>
+						                            <option>Tên loại</option>
+						                            <option>Số lượng</option>
+						                            <option>Ngôn ngữ</option>
+						                            
+						                           
+						                        </select>
+						            </div>
+								</div>
+
+								<!--
+								<div class="form-group">
+						                    <label for="country" class="col-sm-3 control-label">Country</label>
+						                    <div class="col-sm-9">
+						                        <select id="country" class="form-control">
+						                            <option>Viet Nam</option>
+						                            <option>Lao</option>
+						                            <option>Trung Quoc</option>
+						                            <option>Thai Lan</option>
+						                            <option>Nhat Ban</option>
+						                            <option>Campuchia</option>
+						                            <option>Anh</option>
+						                            <option>Han Quoc</option>
+						                        </select>
+						                    </div>
+						                </div>
+						            -->
+							</div><br>
+
+							<div class="YYyy">
+								<table class="table">
+								    <thead>
+								      <tr>
+								        <th>Mã loại</th>
+								        <th>Tên loại sản phẩm</th>
+								        <th>Số lượng sản phẩm</th>
+								        <th>Chỉnh sửa</th>
+
+
+								      </tr>
+								    </thead>
+								    <tbody>
+								      <tr>
+								        <td>Z100</td>
+								        <td>Văn học</td>
+								        <td>250</td>
+								        <td>
+								        	<span class="glyphicon glyphicon-plus"></span>
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>Z101</td>
+								        <td>Tạp chí</td>
+								        <td>400</td>
+								        <td>
+								        	<span class="glyphicon glyphicon-plus"></span>
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>Z102</td>
+								        <td>Ngoại ngữ</td>
+								        <td>300</td>
+								        <td>
+								        	<span class="glyphicon glyphicon-plus"></span>
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>Z103</td>
+								        <td>Truyện cười</td>
+								        <td>1000</td>
+								        <td>
+								        	<span class="glyphicon glyphicon-plus"></span>
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>Z104</td>
+								        <td>Tiểu thuyết</td>
+								        <td>810</td>
+								        <td>
+								        	<span class="glyphicon glyphicon-plus"></span>
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+
+								    </tbody>
+								  </table>
+		
+								
+
+							</div>
+							
+						</div>
+							
+
+
+					</li>
+					<li>
+						<button class="btnAdmin" id="btn004">Nhà xuất bản</button>
+					<div id="004" class="modalAd">
+								 
+							<h3>
+								Tìm kiếm theo nhà xuất bản
+								<input class="TimKiem" type="text" name="tensp"placeholder="Tìm kiếm">
+								<button class="TimKiem" type="submit"><i class="fa fa-search"></i></button>
+								<img class="iconz4AD" src="images_temp/z4.jpg" alt="" width="2" height="45"/>
+								<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="btn-admin">Admin
+                    			</button>
+								
+							</h3>
+							<hr>
+								
+							<div>
+								<h4>Sắp xếp theo</h4>
+								<div>
+									<button>Áp dụng</button>
+									<div class="col-sm-3">
+						                        <select id="country">
+						                            <option>Mã nhà xuất bản</option>
+						                            <option>Tên nhà xuất bản</option>
+						                            <option>Số lượng sản phẩm</option>
+						                            
+						                            
+						                           
+						                        </select>
+						            </div>
+								</div>
+
+								<!--
+								<div class="form-group">
+						                    <label for="country" class="col-sm-3 control-label">Country</label>
+						                    <div class="col-sm-9">
+						                        <select id="country" class="form-control">
+						                            <option>Viet Nam</option>
+						                            <option>Lao</option>
+						                            <option>Trung Quoc</option>
+						                            <option>Thai Lan</option>
+						                            <option>Nhat Ban</option>
+						                            <option>Campuchia</option>
+						                            <option>Anh</option>
+						                            <option>Han Quoc</option>
+						                        </select>
+						                    </div>
+						                </div>
+						            -->
+							</div><br>
+							
+								<div class="YYyy">
+								<table class="table">
+								    <thead>
+								      <tr>
+								        <th>Mã nhà xuất bản</th>
+								        <th>Tên nhà xuất bản</th>
+								        <th>Số lượng sản phẩm</th>
+								        <th>Chỉnh sửa</th>
+
+
+								      </tr>
+								    </thead>
+								    <tbody>
+								      <tr>
+								        <td>X100</td>
+								        <td>NXB Kim Đồng</td>
+								        <td>250</td>
+								        <td>
+								        	<span class="glyphicon glyphicon-plus"></span>
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>X102</td>
+								        <td>NXB Tạp chí</td>
+								        <td>400</td>
+								        <td>
+								        	<span class="glyphicon glyphicon-plus"></span>
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>X103</td>
+								        <td>NXB Ngoại ngữ</td>
+								        <td>300</td>
+								        <td>
+								        	<span class="glyphicon glyphicon-plus"></span>
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>X103</td>
+								        <td>NXB Trẻ</td>
+								        <td>1000</td>
+								        <td>
+								        	<span class="glyphicon glyphicon-plus"></span>
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+								      <tr>
+								        <td>X104</td>
+								        <td>NXB tpHCM</td>
+								        <td>810</td>
+								        <td>
+								        	<span class="glyphicon glyphicon-plus"></span>
+								        	<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+								        </td>
+										
+
+								      </tr>
+
+								    </tbody>
+								  </table>
+									
+								
+
+							</div>						
+
+					</li>
+					<li>
+						<button class="btnAdmin" id="btn005">Đơn hàng</button>
+						<div id="005" class="modalAd">
+								 
+							<h3>
+								Tìm kiếm theo mã đơn hàng
+								<input class="TimKiem" type="text" name="tensp"placeholder="Tìm kiếm">
+								<button class="TimKiem" type="submit"><i class="fa fa-search"></i></button>
+								<img class="iconz4AD" src="images_temp/z4.jpg" alt="" width="2" height="45"/>
+								<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="btn-admin">Admin
+                    			</button>
+								
+							</h3>
+							<hr>
+								
+							<div>
+								<h4>Sắp xếp theo</h4>
+								<div>
+									<button>Áp dụng</button>
+									<div class="col-sm-3">
+						                        <select id="country">
+						                        	 <option>Ngày mua</option>
+						                            <option>Mã đơn hàng</option>
+						                           
+						                            <option>Tổng tiền</option>
+						                            <option>Trạng thái</option>
+						                            
+						                            
+						                           
+						                        </select>
+						            </div>
+								</div>
+
+							</div><br>
+
+							<div class="YYyy">
+								<table class="table">
+								    <thead>
+								      <tr>
+								        <th>Mã Đơn hàng</th>
+								        <th>Ngày mua</th>
+								        <th>Nơi nhận</th>
+								        <th>Tổng tiền</th>
+								        <th>thanh toán</th>
+								        <th>Trạng thái</th>
+
+
+								      </tr>
+								    </thead>
+								    <tbody>
+								      <tr>
+								        <td>1001</td>
+								        <td>5/4/2018</td>
+								        <td>Đại học Khoa học tự nhiên</td>
+								        <td>200.000 VNĐ</td>
+								        <td>Trực tiếp</td>
+								        <td>Đã thanh toán</td>
+										
+
+								      </tr>
+								      <tr class="ChuaThanhToan">
+								        <td>1002</td>
+								        <td>4/4/2018</td>
+								        <td>Ktx Khu A đai học quốc gia</td>
+								        <td>200.000 VNĐ</td>
+								        <td>Ngân hàng</td>
+								        <td>Chưa thanh toán</td>
+								      </tr>
+								      <tr>
+								        <td>1003</td>
+								        <td>3/4/2018</td>
+								        <td>Ktx Khu B đai học quốc gia</td>
+								        <td>40.000 VNĐ</td>
+								        <td>Trực tiếp</td>
+								        <td>Đã thanh toán</td>
+								      </tr>
+								      <tr class="ChuaThanhToan">
+								        <td>1004</td>
+								        <td>2/4/2018</td>
+								        <td>Ktx Khu B đai học quốc gia</td>
+								        <td>68.000 VNĐ</td>
+								        <td>Trực tiếp</td>
+								        <td>Chưa thanh toán</td>
+								      </tr>
+								      <tr>
+								        <td>1004</td>
+								        <td>1/4/2018</td>
+								        <td>495 Tô Hiến Thánh, Quận 10</td>
+								        <td>100.000 VNĐ</td>
+								        <td>Trực tiếp</td>
+								        <td>Đã thanh toán</td>
+								      </tr>
+
+								    </tbody>
+								  </table>
+								
+								
+
+
+							</div>
+								
+					</li>
+
+
+
+					
+				</ul>
+
+
+			</div><!--END #menu-->
+
+			
+
+			
+		
+
+
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.scrollUp.min.js"></script>
+		<script src="js/price-range.js"></script>
+    	<script src="js/jquery.prettyPhoto.js"></script>
+    	<script src="js/main.js"></script>
+    	<script src="js/login.js"></script>
+	</body>
+</html>
