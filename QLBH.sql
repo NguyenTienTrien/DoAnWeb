@@ -1,15 +1,12 @@
 /*
 Navicat MySQL Data Transfer
-
 Source Server         : local
 Source Server Version : 50524
 Source Host           : localhost:3306
 Source Database       : qlbh
-
 Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
-
 Date: 2014-04-21 00:13:51
 */
 create database qlbh;
