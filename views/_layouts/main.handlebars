@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	{{!-- // <script src="js/jquery.js"></script>
 	// <script src="js/bootstrap.min.js"></script> --}}
-	
+	{{{_sections.css}}}
 </head>
 <body>
 	<header id="header"><!--header-->
@@ -58,6 +58,29 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
+								{{#if layoutVM.isLogged}}
+								<form id="frmLogout" method="post" action="/account/logout"></form>
+								<li><a href="/cart"><span class="fa fa-shopping-cart"></span>  Shopping Cart ({{layoutVM.cartSummary}} items)</a></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Hi, {{layoutVM.curUser.f_Username}}!</strong> <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="/account/profile">Profile</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a id="lnkLogout" href="javascript:;">Logout</a></li>
+									</ul>
+								</li>
+								{{!-- <div class="col-sm-1.5">						<div class="search_box pull-right">
+							
+
+							<button class="btn btn-warning"  style="width:auto;">
+								<span class="fa fa-shopping-cart"></span>
+							GIỎ HÀNG
+							</button>
+						</div>
+					</div> --}}
+								{{else}}
+								
+
 								<li><em class="fa fa-user"></em>
 								<!--form dang ky-->		
 							   
@@ -77,6 +100,7 @@
 									<button class="buttonLogin"  style="width:auto;" onclick="window.location.href='/account/login'">Đăng nhập</button>
 
 								</li>
+								{{/if}}
 							</ul>
 						</div>
 					</div>
@@ -121,7 +145,7 @@
 							 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 						</div>
 					</div>
-					<div class="col-sm-1.5">						<div class="search_box pull-right">
+					{{!-- <div class="col-sm-1.5">						<div class="search_box pull-right">
 							
 
 							<button class="btn btn-warning"  style="width:auto;">
@@ -129,7 +153,7 @@
 							GIỎ HÀNG
 							</button>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 				</div>
 			</div>
@@ -271,5 +295,11 @@
     <script src="/js/jquery.prettyPhoto.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/login.js"></script>
+    <script type="text/javascript">
+		$('#lnkLogout').on('click', function() {
+		    $('#frmLogout').submit();
+		});
+	</script>
+    {{{_sections.js}}}
 </body>
 </html>

@@ -8,11 +8,15 @@ var session = require('express-session');
 
 var handleLayoutMDW = require('./middle_wares/handleLayout');
 var handle404MDW = require('./middle_wares/handle404');
+var restrict = require('./middle_wares/restrict');
+
 
 // var categoryController = require('./controllers/categoryController');
 var productController = require('./controllers/productController');
 var homeController = require('./controllers/homeController');
 var accountController = require('./controllers/accountController');
+var cartController = require('./controllers/cartController');
+
 
 
 var app = express();
@@ -61,6 +65,8 @@ app.use('/home', homeController);
 // app.use('/category', categoryController);
 app.use('/product', productController);
 app.use('/account', accountController);
+app.use('/cart', restrict, cartController);
+
 
 
 

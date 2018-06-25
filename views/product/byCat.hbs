@@ -2,6 +2,17 @@
     Products
 {{/section}}
 
+{{#section 'js'}}
+<script type="text/javascript">
+	$('.addItem').on('click', function() {
+	    var id = $(this).data('proid');
+	    $('#txtP').val(id);
+	    $('#txtQ').val(1);
+	    $('#frmAddItem').submit();
+	});
+</script>
+{{/section}}
+
 {{#if noProducts}}
 <div class="row">
 	<div class="col-sm-12 col-md-12 col-lg-12">
@@ -10,6 +21,10 @@
 </div>
 {{else}}
 <div class="row">
+	<form id="frmAddItem" method="post" action="/cart/add">
+		<input type="hidden" name="proId" id="txtP">
+		<input type="hidden" name="quantity" id="txtQ">
+	</form>
 	{{#each products}}
 	<div class="col-sm-6 col-md-4">
 		<div class="thumbnail">
@@ -19,13 +34,16 @@
 				<h4>{{number_format Price}}</h4>
 				<p style="height: 60px">{{TinyDes}}</p>
 				<p>
-					<a href="#" class="btn btn-primary">
+					<a href="/product/detail/{{ProID}}" class="btn btn-primary">
 						<span class="fa fa-eye"></span>
 						View Details
 					</a>
-					<a href="#" class="btn btn-primary">
+					{{#if ../layoutVM.isLogged}}
+					<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-default addItem">
 						<span class="fa fa-shopping-cart"></span>
+						Add
 					</a>
+					{{/if}}
 				</p>
 			</div>
 		</div>

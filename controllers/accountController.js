@@ -33,28 +33,36 @@ router.get('/login', (req, res) => {
     res.render('account/login');
 });
 
-// router.post('/login', (req, res) => {
-//     var user = {
-//         username: req.body.username,
-//         password: sha256(req.body.rawPWD).toString()
-//     };
+router.post('/login', (req, res) => {
+    var user = {
+        username: req.body.username,
+        password: sha256(req.body.rawPWD).toString()
+    };
 
-//     accountRepo.login(user).then(rows => {
-//         if (rows.length > 0) {
-//             req.session.isLogged = true;
-//             req.session.curUser = rows[0];
-//             res.redirect('/');
-//         } else {
-//             var vm = {
-//                 showError: true,
-//                 errorMsg: 'Login failed'
-//             };
-//             res.render('account/login', vm);
-//         }
-//     });
-// });
+    accountRepo.login(user).then(rows => {
+        if (rows.length > 0) {
+            req.session.isLogged = true;
+            req.session.curUser = rows[0];
+            res.redirect('/');
+        } else {
+            var vm = {
+                showError: true,
+                errorMsg: 'Login failed'
+            };
+            res.render('account/login', vm);
+        }
+    });
+});
 
-router.get('/profile', restrict, (req, res) => {
+router.post('/logout', restrict, (req, res) => {
+    req.session.isLogged = false;
+    req.session.curUser = null;
+    req.session.cart = [];
+
+    res.redirect(req.headers.referer);
+});
+
+router.get('/profile', (req, res) => {   //router.get('/profile', restrict, (req, res)
     res.render('account/profile');
 });
 

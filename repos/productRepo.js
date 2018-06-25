@@ -20,3 +20,8 @@ exports.countByCat = catId => {
 	var sql = `select count(*) as total from products where CatID = ${catId}`;
 	return db.load(sql);
 }
+
+exports.single = id => {
+	var sql = `select * from products where ProID = ${id}`;
+	return db.load(sql);
+}
