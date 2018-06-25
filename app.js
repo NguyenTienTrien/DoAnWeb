@@ -4,13 +4,16 @@ var exphbs_section = require('express-handlebars-sections');
 var bodyParser = require('body-parser');
 var path = require('path');
 var wnumb = require('wnumb');
+var session = require('express-session');
 
-// var handleLayoutMDW = require('./middle-wares/handleLayout');
-// var handle404MDW = require('./middle-wares/handle404');
+var handleLayoutMDW = require('./middle_wares/handleLayout');
+var handle404MDW = require('./middle_wares/handle404');
 
 // var categoryController = require('./controllers/categoryController');
-// var productController = require('./controllers/productController');
+var productController = require('./controllers/productController');
 var homeController = require('./controllers/homeController');
+var accountController = require('./controllers/accountController');
+
 
 var app = express();
 
@@ -18,13 +21,13 @@ var app = express();
         defaultLayout: 'main',
         layoutsDir: 'views/_layouts/',
         helpers: {
-            section: exphbs_section()//,
-            // number_format: n => {
-            //     var nf = wnumb({
-            //         thousand: ','
-            //     });
-            //     return nf.to(n);
-            // }
+            section: exphbs_section(),
+            number_format: n => {
+                var nf = wnumb({
+                    thousand: ','
+                });
+                return nf.to(n);
+            }
         }
     }));
 app.set('view engine', 'hbs');
@@ -38,7 +41,17 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-// app.use(handleLayoutMDW);
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    // cookie: {
+    //     secure: true
+    // }
+}));
+
+
+app.use(handleLayoutMDW);
 
 app.get('/', (req, res) => {
     res.redirect('/home');
@@ -46,9 +59,12 @@ app.get('/', (req, res) => {
 
 app.use('/home', homeController);
 // app.use('/category', categoryController);
-// app.use('/product', productController);
+app.use('/product', productController);
+app.use('/account', accountController);
 
-// app.use(handle404MDW);
+
+
+app.use(handle404MDW);
 
 app.listen(4000, () => {
     console.log('server running on port 4000');
