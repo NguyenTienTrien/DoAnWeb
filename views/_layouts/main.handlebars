@@ -122,7 +122,7 @@
 						</div>
 						<div  class="mainmenu pull-left" >
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">Trang Chủ</a></li>
+								<li><a href="/home" class="active">Trang Chủ</a></li>
 								<li class="dropdown"><a href="#" class="active">Chương Trình Khuyến Mãi<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
 										<li><a href="product-details.html" class="active">Giảm Giá</a></li>   
@@ -191,13 +191,31 @@
 							</div>
 						</div><!--/brands_products-->
 				</div>
-				<div class="col-sm-10">
+				{{!-- <div class="col-sm-10">
 					{{{body}}}
 					
 					
 				</div>	
+ --}}
+					
 
-				
+				<div class="col-sm-10">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							{{{_sections.title}}}
+						</h3>
+					</div>
+					<div class="panel-body">
+						{{{body}}}
+					</div>
+				</div>
+			
+
+				</div>	
+
+
+			<!-- -->					
 			</div>
 		</div>
 	</section><!--/slider-->

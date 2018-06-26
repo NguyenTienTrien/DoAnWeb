@@ -1,59 +1,73 @@
 {{#section 'title'}}
-    Index
+    Danh Sách Nổi Bật
+{{/section}}
+</br>
+<h4>Bán Chạy Nhất</h4>
+{{#section 'js'}}
+<script type="text/javascript">
+	$('.addItem').on('click', function() {
+	    var id = $(this).data('proid');
+	    $('#txtP').val(id);
+	    $('#txtQ').val(1);
+	    $('#frmAddItem').submit();
+	});
+</script>
 {{/section}}
 
-<div class="col-sm-10">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
-						</ol>
-						
-						<div class="carousel-inner">
-							<div class="item active">
-								<div class="col-sm-3">
-									<h1><span>Sách</span>-Tri Thức</h1>
-									<h2>Mang lại Tri Thức</h2>
-									<button class="btn btn-default"  style="width:auto;">Mua ngay</button>
-								</div>
-								<div class="col-sm-9">
-									<img src="/images_temp/trithuc.jpg"  alt =" tri thuc" width="500"  height="473" > 
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-3">
-								  	<h1><span>Sách</span>-Động Lực</h1>
-									<h2>Thúc Đẫy Động Lực Để Thành Công</h2>
-									<button class="btn btn-default"  style="width:auto;">Mua ngay</button>
-								</div>
-								<div class="col-sm-9">
-									<img src="/images_temp/trithuc1.jpg" width="500" height="473">
-								</div>
-							</div>
-							
-							<div class="item">
-								<div class="col-sm-3 ">
-									<h1><span>Sách</span>-Tiểu Thuyết</h1>
-									<h2>Đưa Thế Giới Lại Gần Hơn</h2>
-									<button class="btn btn-default" style="width:auto;">Mua ngay</button>
-									
-								</div>
-								<div class="col-sm-9">
-									<img src="/images_temp/trithuc2.jpg" width="500" height="473">
-								</div>
-							</div>
-							
-						</div>
-						
-						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-						</a>
-						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</div>
-					
 
+{{#if noProducts}}
+<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">
+		NO PRODUCTS
+	</div>
+</div>
+{{else}}
+<div class="row">
+	<form id="frmAddItem" method="post" action="/cart/add">
+		<input type="hidden" name="proId" id="txtP">
+		<input type="hidden" name="quantity" id="txtQ">
+	</form>
+	{{#each products}}
+	<div class="col-sm-6 col-md-4">
+		<div class="thumbnail">
+			<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
+			<div class="caption">
+				<h4>{{ProName}}</h4>
+				<h4>{{number_format Price}}</h4>
+				
+				<p>Số lượng đã bán: {{SoLuongDaBan}} </p>
 
-</div> <!--end -->
+				<p style="height: 60px">{{TinyDes}}</p>
+
+				<p>
+					<a href="/product/detail/{{ProID}}" class="btn btn-primary">
+						<span class="fa fa-eye"></span>
+						View Details
+					</a>
+					{{#if ../layoutVM.isLogged}}
+					<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+						<span class="fa fa-shopping-cart"></span>
+						Add
+					</a>
+					{{/if}}
+				</p>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</div>
+
+<ul class="pagination">
+	<li><a href="#">&laquo;</a></li>
+	{{#each page_numbers}}
+		{{#if isCurrentPage}}
+		<li class="active"><a href="javascript:;">{{value}}</a></li>
+		{{else}}
+		<li><a href="?page={{value}}">{{value}}</a></li>
+		{{/if}}
+	{{/each}}
+	<li><a href="#">&raquo;</a></li>
+</ul>
+
+{{/if}}
+

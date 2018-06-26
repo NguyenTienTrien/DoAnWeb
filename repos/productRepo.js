@@ -25,3 +25,24 @@ exports.single = id => {
 	var sql = `select * from products where ProID = ${id}`;
 	return db.load(sql);
 }
+
+exports.loadBanChay=(offset) =>{
+	var sql=`select * from products order by SoLuongDaBan DESC limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+	return db.load(sql);
+}
+
+exports.countBanChay = () => {
+	var sql = `select count(*) as total from products`;
+	return db.load(sql);
+}
+
+
+exports.loadLuotXem=(offset) =>{
+	var sql=`select * from products order by SoLuotXem DESC limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+	return db.load(sql);
+}
+
+exports.countLuotXem = () => {
+	var sql = `select count(*) as total from products`;
+	return db.load(sql);
+}

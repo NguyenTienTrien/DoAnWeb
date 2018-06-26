@@ -5,7 +5,7 @@
 {{#with product}}
 <div class="row">
     <div class="col-md-12">
-        <img src="/sp/{{ProID}}/main.jpg" />
+        <img src="/images/{{ProID}}/main_images.jpg" />    <!--sua dia chi -->
     </div>
     <div class="col-md-12 caption-lg-orange">
         <h3>{{ProName}}</h3>
@@ -16,9 +16,16 @@
     <div class="col-md-12 padding">
         Tồn kho: {{Quantity}}
     </div>
+    {{!--  <div class="col-md-12 padding">
+        Ngày đăng tải: {{DateDangTai}}
+    </div>
+    <div class="col-md-12 padding">
+        Số lượng đã bán: {{SoLuongDaBan}}
+    </div> --}}
     <div class="col-md-12 padding">
         {{{FullDes}}}
     </div>
+   
 </div>
 {{/with}}
 
@@ -31,7 +38,7 @@
                 <input name="quantity" type="text" class="form-control" placeholder="Slg" value="1">
                 <span class="input-group-btn">
                     <button class="btn btn-primary" type="submit">
-                        <span class="glyphicon glyphicon-plus"></span>
+                        <span class="fa fa-plus"></span>
                     </button>
                 </span>
             </div>

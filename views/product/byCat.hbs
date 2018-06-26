@@ -28,19 +28,19 @@
 	{{#each products}}
 	<div class="col-sm-6 col-md-4">
 		<div class="thumbnail">
-			<img src="/sp/{{ProID}}/main_thumbs.jpg" alt="{{ProName}}" title="{{ProName}}">
+			<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
 			<div class="caption">
 				<h4>{{ProName}}</h4>
 				<h4>{{number_format Price}}</h4>
 				<p style="height: 60px">{{TinyDes}}</p>
 				<p>
 					<a href="/product/detail/{{ProID}}" class="btn btn-primary">
-						<span class="glyphicon glyphicon-eye-open"></span>
+						<span class="fa fa-eye"></span>
 						View Details
 					</a>
 					{{#if ../layoutVM.isLogged}}
-					<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-default addItem">
-						<span class="glyphicon glyphicon-shopping-cart"></span>
+					<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+						<span class="fa fa-shopping-cart"></span>
 						Add
 					</a>
 					{{/if}}
