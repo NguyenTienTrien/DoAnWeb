@@ -39,11 +39,30 @@ router.post('/login', (req, res) => {
         password: sha256(req.body.rawPWD).toString()
     };
 
+    // accountRepo.login(user).then(rows => {
+    //     if (rows.length > 0) {
+    //         req.session.isLogged = true;
+    //         req.session.curUser = rows[0];
+    //         res.redirect('/');
+    //     } else {
+    //         var vm = {
+    //             showError: true,
+    //             errorMsg: 'Login failed'
+    //         };
+    //         res.render('account/login', vm);
+    //     }
+    // });
     accountRepo.login(user).then(rows => {
         if (rows.length > 0) {
             req.session.isLogged = true;
             req.session.curUser = rows[0];
-            res.redirect('/');
+            req.session.cart = [];
+
+            var url = '/';
+            if (req.query.retUrl) {
+                url = req.query.retUrl;
+            }
+            res.redirect(url);
         } else {
             var vm = {
                 showError: true,
