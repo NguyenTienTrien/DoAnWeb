@@ -46,3 +46,99 @@
     </div>
 </form>
 {{/if}}
+
+
+
+<hr>
+<h4>Sách cùng loại</h4>
+
+
+{{!-- 
+ --}}
+ {{#if noCungLoaiSP}}
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        NO PRODUCTS
+    </div>
+</div>
+{{else}}
+<div class="row">
+    <form id="frmAddItem" method="post" action="/cart/add">
+        <input type="hidden" name="proId" id="txtP">
+        <input type="hidden" name="quantity" id="txtQ">
+    </form>
+    {{#each CungLoaiSP}}
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
+            <div class="caption">
+                <h4>{{ProName}}</h4>
+                <h4>{{number_format Price}}</h4>
+                
+
+                <p style="height: 60px">{{TinyDes}}</p>
+
+                <p>
+                    <a href="/product/detail/{{ProID}}" class="btn btn-primary">
+                        <span class="fa fa-eye"></span>
+                        View Details
+                    </a>
+                    {{#if ../layoutVM.isLogged}}
+                    <a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+                        <span class="fa fa-shopping-cart"></span>
+                        Add
+                    </a>
+                    {{/if}}
+                </p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+{{/if}}
+
+<hr>
+<h4>Sách cùng NXB</h4>
+ {{#if noCungNXB}}
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        NO PRODUCTS
+    </div>
+</div>
+{{else}}
+<div class="row">
+    <form id="frmAddItem" method="post" action="/cart/add">
+        <input type="hidden" name="proId" id="txtP">
+        <input type="hidden" name="quantity" id="txtQ">
+    </form>
+    {{#each CungNXB}}
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
+            <div class="caption">
+                <h4>{{ProName}}</h4>
+                <h4>{{number_format Price}}</h4>
+                
+
+                <p style="height: 60px">{{TinyDes}}</p>
+
+                <p>
+                    <a href="/product/detail/{{ProID}}" class="btn btn-primary">
+                        <span class="fa fa-eye"></span>
+                        View Details
+                    </a>
+                    {{#if ../layoutVM.isLogged}}
+                    <a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+                        <span class="fa fa-shopping-cart"></span>
+                        Add
+                    </a>
+                    {{/if}}
+                </p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+{{/if}}

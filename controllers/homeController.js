@@ -27,8 +27,11 @@ router.get('/', (req, res) => {
 	    // var p22 = productRepo.countLuotXem();
     //
     //
+        var p13 = productRepo.loadPhatHanh(offset2);
+    //
+    //
 
-    Promise.all([p1, p2,p12]).then(([rows, count_rows,rows2]) => {
+    Promise.all([p1, p2,p12,p13]).then(([rows, count_rows,rows2,rows3]) => {
         var total = count_rows[0].total;
         var nPages = total / config.PRODUCTS_PER_PAGE;
         if (total % config.PRODUCTS_PER_PAGE > 0)
@@ -64,8 +67,10 @@ router.get('/', (req, res) => {
             //
             products2: rows2,
             noProducts2: rows2.length ===0,
-            page_numbers2: numbers2
+            page_numbers2: numbers2,
             //
+            products3: rows3,
+            noProducts3: rows3.length ===0
         };
         res.render('home/index', vm);
 

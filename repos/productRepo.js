@@ -26,8 +26,35 @@ exports.single = id => {
 	return db.load(sql);
 }
 
+//lấy loại sản phẩm từ id 1 sản phẩm
+exports.CungLoai = id =>
+{
+	var sql = `
+SELECT * FROM qlbh.products
+where CatID in ( 
+select ab.CatID
+from qlbh.products ab
+where ProID=${id}	
+ ) limit 5`;
+    return db.load(sql);
+}
+//cung nxb
+exports.CungNXB = id =>
+{
+	var sql = `
+SELECT * FROM qlbh.products
+where NXBID in ( 
+select ab.NXBID
+from qlbh.products ab
+where ProID=${id}	
+ ) limit 5`;
+    return db.load(sql);
+}
+
+
+
 exports.loadBanChay=(offset) =>{
-	var sql=`select * from products order by SoLuongDaBan DESC limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+	var sql=`select * from qlbh.products order by SoLuongDaBan DESC limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
 	return db.load(sql);
 }
 
@@ -44,5 +71,11 @@ exports.loadLuotXem=(offset) =>{
 
 exports.countLuotXem = () => {
 	var sql = `select count(*) as total from products`;
+	return db.load(sql);
+}
+
+
+exports.loadPhatHanh=(offset) =>{
+	var sql=`select * from products order by DateDangTai DESC limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
 	return db.load(sql);
 }
