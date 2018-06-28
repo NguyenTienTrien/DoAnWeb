@@ -17,7 +17,7 @@ var homeController = require('./controllers/homeController');
 var accountController = require('./controllers/accountController');
 var cartController = require('./controllers/cartController');
 var searchController= require('./controllers/searchController');
-
+var adminController=require('./controllers/adminController');
 
 var app = express();
 
@@ -67,7 +67,8 @@ app.use('/product', productController);
 app.use('/account', accountController);
 app.use('/cart', restrict, cartController);
 app.use('/abcd',searchController);
-
+app.use('/admin',adminController);
+app.use('/admin/login',adminController);
 
 
 app.use(handle404MDW);
