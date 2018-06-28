@@ -9,7 +9,15 @@ exports.login = user => {
 	var sql = `select * from users where f_Username = '${user.username}' and f_Password = '${user.password}'`;
 	return db.load(sql);
 }
-exports.update = user => {
-	var sql = `update  users set f_Username='${user.username}', f_Password='{user.password}', f_Name='${user.name}', f_Email='${user.email}', f_DOB='${user.dob}' where f_ID = '${user.ID}'` 
-	return db.save(sql);
+
+
+exports.update = user =>
+{
+	var sql=`update users set f_Username='${user.tenDN}' , f_Password='${user.matKhau}', f_Email='${user.email}', f_Name='${user.hoten}' where f_ID='${user.idTK}'`;
+	return db.load(sql);
+}
+
+exports.addInfo = user =>{
+	var sql=`update users set f_phone= '${user.phone}',f_address='${user.address}' where f_ID='${user.idTK}'`;
+	return db.load(sql);
 }

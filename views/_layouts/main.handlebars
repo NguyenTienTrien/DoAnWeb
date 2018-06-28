@@ -55,17 +55,23 @@
 							<a href="index.html"><img class="iconz4" src="/images_temp/backround.jpg" alt="" width="100" height="45"/><font size="5" color="red">&nbsp;&nbsp;ZERO4 BOOK</font></a>
 						</div>
 					</div>
-					<div class="col-sm-8">
+					<div class="col-sm-8 ">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								{{#if layoutVM.isLogged}}
 								<form id="frmLogout" method="post" action="/account/logout"></form>
-								<li><a href="/cart"><span class="fa fa-shopping-cart"></span>  Shopping Cart ({{layoutVM.cartSummary}} items)</a></li>
+								<li><a href="/cart{{!-- /{{layoutVM.curUser.f_ID}} --}}"><span class="fa fa-shopping-cart"></span>  Shopping Cart ({{layoutVM.cartSummary}} items)</a></li>
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Hi, {{layoutVM.curUser.f_Username}}!</strong> <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="/account/profile">Profile</a></li>
+										<li><a href="/account/profile/{{layoutVM.curUser.f_ID}}">Profile</a></li>
 										<li role="separator" class="divider"></li>
+										<li><a href="/account/pay/{{layoutVM.curUser.f_ID}}">Pay</a></li>
+										{{!-- <li role="separator" class="divider"></li> --}}
+									</br>
+									<li><a href="/account/LichSuThanhToan/{{layoutVM.curUser.f_ID}}">History Pay</a></li>
+										{{!-- <li role="separator" class="divider"></li> --}}
+									</br>
 										<li><a id="lnkLogout" href="javascript:;">Logout</a></li>
 									</ul>
 								</li>
@@ -140,11 +146,32 @@
 						</div>
 					</div>
 					<div class="col-sm-3">
-						<div class="search_box pull-right">
+						{{!--  --}}
+						<form method="POST" action="/abcd" >
+									
+									<input class="input" placeholder="Nhập" name="searchntt">
+									<button class=" btn-outline-success my-2 my-sm-0" type="submit" >Tìm kiếm</button>
+						</form>	
+						{{!--  --}}
+						{{!-- <div class="search_box pull-right">
 							<input type="text" placeholder="Tìm kiếm"/>
 							 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-						</div>
+						</div> --}}
 					</div>
+
+					{{!-- <div class="col-md-6">
+							<div class="header-search">
+								<form method="POST" action="/search/action" >
+									<select class="input-select" name="option">
+										<option value="0">Tên sản phẩm</option>
+										<option value="1">Loại sản phẩm</option>
+										<option value="2">Nhà sản xuất</option>
+									</select>
+									<input class="input" placeholder="Bạn đang tìm sản phẩm nào?" name="searchEle">
+									<button class="search-btn" type="submit" >Tìm kiếm</button>
+								</form>
+							</div>
+						</div> --}}
 					{{!-- <div class="col-sm-1.5">						<div class="search_box pull-right">
 							
 
@@ -183,7 +210,7 @@
 
 										<h2>Nhà Xuất Bản</h2>
 										{{#each layoutNXB.NhaXuatBan}}
-										<a href="/product/byCat/{{NXBID}}" class="list-group-item"><span class="pull-right "> <span class="fa fa-angle-double-right"></span></span>{{NXBName}}</a>
+										<a href="/product/byNXB/{{NXBID}}" class="list-group-item"><span class="pull-right "> <span class="fa fa-angle-double-right"></span></span>{{NXBName}}</a>
 										{{/each}}
 
 									</li>
@@ -306,7 +333,8 @@
 		</div>
 		
 	</footer><!--/Footer-->
-
+	
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<script src="/js/jquery-3.3.1.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/jquery.scrollUp.min.js"></script>

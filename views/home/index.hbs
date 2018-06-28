@@ -5,6 +5,16 @@
 </br>
 
 
+{{#section 'js'}}
+<script type="text/javascript">
+	$('.addItem').on('click', function() {
+	    var id = $(this).data('proid');
+	    $('#txtP').val(id);
+	    $('#txtQ').val(1);
+	    $('#frmAddItem').submit();
+	});
+</script>
+{{/section}}
 
 {{#if noProducts}}
 <div class="row">

@@ -16,7 +16,7 @@ var productController = require('./controllers/productController');
 var homeController = require('./controllers/homeController');
 var accountController = require('./controllers/accountController');
 var cartController = require('./controllers/cartController');
-
+var searchController= require('./controllers/searchController');
 
 
 var app = express();
@@ -66,7 +66,7 @@ app.use('/home', homeController);
 app.use('/product', productController);
 app.use('/account', accountController);
 app.use('/cart', restrict, cartController);
-
+app.use('/abcd',searchController);
 
 
 

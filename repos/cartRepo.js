@@ -38,3 +38,11 @@ exports.remove = (cart, proId) => {
         }
     }
 }
+
+exports.TongTien= cart =>{
+    var total = 0;
+    for(var i = cart.length - 1; i >= 0;i--){
+        total += (cart[i].product.Price * cart[i].quantity);
+    }
+    return total;
+}

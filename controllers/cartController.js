@@ -5,10 +5,17 @@ var productRepo = require('../repos/productRepo'),
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    var vm = {
-        items: req.session.cart
-    };
-    res.render('cart/index', vm);
+     var p1 = cartRepo.TongTien(req.session.cart);
+    Promise.all([p1]).then(([rows]) => {
+
+        var vm = {
+            items: req.session.cart,
+            total: rows
+        };
+        
+        res.render('cart/index', vm);
+    });
+    // res.render('cart/index', vm);
 });
 
 router.post('/add', (req, res) => {

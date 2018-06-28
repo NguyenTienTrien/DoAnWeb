@@ -10,18 +10,24 @@
     <div class="col-md-12 caption-lg-orange">
         <h3>{{ProName}}</h3>
     </div>
+   {{!--  <div class="col-md-12 padding">
+        <span class="caption-lg-red">tác giả: {{TinyDes}}</span>
+    </div> --}}
     <div class="col-md-12 padding">
         <span class="caption-lg-red">Giá bán: {{number_format Price}}</span>
     </div>
     <div class="col-md-12 padding">
         Tồn kho: {{Quantity}}
     </div>
-    {{!--  <div class="col-md-12 padding">
+   {{!--   <div class="col-md-12 padding">
         Ngày đăng tải: {{DateDangTai}}
-    </div>
+    </div> --}}
     <div class="col-md-12 padding">
         Số lượng đã bán: {{SoLuongDaBan}}
-    </div> --}}
+    </div>
+    <div class="col-md-12 padding">
+        Số lượt xem: {{SoLuotXem}}
+    </div>
     <div class="col-md-12 padding">
         {{{FullDes}}}
     </div>
@@ -39,6 +45,7 @@
                 <span class="input-group-btn">
                     <button class="btn btn-primary" type="submit">
                         <span class="fa fa-plus"></span>
+                        Add
                     </button>
                 </span>
             </div>

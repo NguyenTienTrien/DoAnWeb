@@ -20,7 +20,19 @@ exports.countByCat = catId => {
 	var sql = `select count(*) as total from products where CatID = ${catId}`;
 	return db.load(sql);
 }
+//Nhà xuất bản
 
+exports.loadPageByNXB = (nxbID, offset) => {
+	var sql = `select * from products where NXBID = ${nxbID} limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+	return db.load(sql);
+}
+
+exports.countByNXB = nxbID => {
+	var sql = `select count(*) as total from products where NXBID = ${nxbID}`;
+	return db.load(sql);
+}
+
+//
 exports.single = id => {
 	var sql = `select * from products where ProID = ${id}`;
 	return db.load(sql);

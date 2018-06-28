@@ -1,68 +1,47 @@
 {{#section 'title'}}
-    Profile
+    Cập nhật thông tin cá nhân
 {{/section}}
 
-{{#section 'css'}}
-<style>
-        .abc {
-            display: none;
-        }
- </style>
-{{/section}}
+{{#if layoutVM.isLogged}}
 
 <div class="row">
+
 	<div class="col-sm-12 col-md-12 col-lg-12">
-		Sinh viên tự thực hiện.
-	</div>
-</div>
-<form action="" method="POST" class="form-horizontal" role="form">
-	<div class="abc form-group">
-        <label for="txtUsername" class="col-sm-2 control-label">ID</label>
+		<form class="form-horizontal" method="post" action="" id="frmprofile">
+    <div class="form-group">
+        <label for="txtNewTenDangNhap" class="col-sm-2 control-label">Tên đăng nhập</label>
         <div class="col-sm-4">
-            <input type="text" class="form-control" id="txtID" value="{{layoutVM.curUser.f_ID}}" name="ID">
+            <input type="text" class="form-control" id="txtUsername" placeholder="" name="loginName">
+        </div>
+    </div>        
+    <div class="form-group">
+        <label for="txtNewUsername" class="col-sm-2 control-label">Họ Tên</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="txtUsername" placeholder="" name="username">
         </div>
     </div>
     <div class="form-group">
-        <label for="txtUsername" class="col-sm-2 control-label">Tên đăng nhập</label>
+        <label for="txtNewEmail" class="col-sm-2 control-label">Email mới</label>
         <div class="col-sm-4">
-            <input type="text" class="form-control" id="txtUsername" value="{{layoutVM.curUser.f_Username}}" name="username">
+            <input type="text" class="form-control" id="txtEmail" placeholder="" name="Email">
         </div>
     </div>
     <div class="form-group">
-        <label for="txtPWD" class="col-sm-2 control-label">Password</label>
+        <label for="txtNewPWD" class="col-sm-2 control-label">Mật khẩu mới</label>
         <div class="col-sm-4">
-            <input type="password" class="form-control" id="txtPWD" value="{{layoutVM.curUser.f_Password}}" name="rawPWD">
+            <input type="password" class="form-control" id="txtPWD" placeholder="" name="rawPWD">
         </div>
     </div>
-							    
+   
     <div class="form-group">
-        <label for="txtName" class="col-sm-2 control-label">Họ tên</label>
-        <div class="col-sm-4">
-            <input type="text" class="form-control" id="txtName" value="{{layoutVM.curUser.f_Name}}" name="name">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="txtEmail" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-4">
-            <input type="text" class="form-control" id="txtEmail" value="{{layoutVM.curUser.f_Email}}" name="email">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="txtDOB" class="col-sm-2 control-label">Ngày sinh</label>
-        <div class="col-sm-4">
-            <input type="text" class="form-control" id="txtDOB" value="{{layoutVM.curUser.f_DOB}}" name="dob">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-10 col-sm-offset-2">
-            <button  class="btn btn-success">
-                <span class="fa fa-check"></span>
-                Cập Nhật Thông Tin Cá Nhân
-            </button>
-            <button  class="btn btn-cancel">
-                <span class="fa fa-check"></span>
-                Hủy
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">
+            	<span class="fa fa-check"></span>
+            	Cập Nhật
             </button>
         </div>
     </div>
 </form>
+	</div>
+</div>
+{{/if}}

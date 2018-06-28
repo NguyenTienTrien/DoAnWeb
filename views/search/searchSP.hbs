@@ -1,0 +1,72 @@
+{{#section 'title'}}
+    Sách bạn muốn tìm kiếm
+{{/section}}
+
+{{!-- {{#section 'js'}}
+<script type="text/javascript">
+	$('.addItem').on('click', function() {
+	    var id = $(this).data('proid');
+	    $('#txtP').val(id);
+	    $('#txtQ').val(1);
+	    $('#frmAddItem').submit();
+	});
+</script>
+{{/section}} --}}
+
+
+{{#if noProducts}}
+<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">
+		NO PRODUCTS
+	</div>
+</div>
+{{else}}
+<div class="row">
+	<form id="frmAddItem" method="post" action="/cart/add">
+		<input type="hidden" name="proId" id="txtP">
+		<input type="hidden" name="quantity" id="txtQ">
+	</form>
+	{{#each products}}
+	<div class="col-sm-6 col-md-4">
+		<div class="thumbnail">
+			<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
+			<div class="caption">
+				<h4>{{ProName}}</h4>
+				<h4>{{number_format Price}}</h4>
+				
+				<p>Số lượng đã bán: {{SoLuongDaBan}} </p>
+
+				<p style="height: 60px">{{TinyDes}}</p>
+
+				<p>
+					<a href="/product/detail/{{ProID}}" class="btn btn-primary">
+						<span class="fa fa-eye"></span>
+						View Details
+					</a>
+					{{#if ../layoutVM.isLogged}}
+					<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+						<span class="fa fa-shopping-cart"></span>
+						Add
+					</a>
+					{{/if}}
+				</p>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</div>
+
+{{!-- <ul class="pagination">
+	<li><a href="#">&laquo;</a></li>
+	{{#each page_numbers}}
+		{{#if isCurrentPage}}
+		<li class="active"><a href="javascript:;">{{value}}</a></li>
+		{{else}}
+		<li><a href="?page={{value}}">{{value}}</a></li>
+		{{/if}}
+	{{/each}}
+	<li><a href="#">&raquo;</a></li>
+</ul> --}}
+
+{{/if}}
+
