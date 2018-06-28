@@ -68,7 +68,8 @@ app.use('/account', accountController);
 app.use('/cart', restrict, cartController);
 app.use('/abcd',searchController);
 app.use('/admin',adminController);
-app.use('/admin/login',adminController);
+// app.use('/admin/NhaXuatBan',adminController);
+// app.use('/admin/login',adminController);
 
 
 app.use(handle404MDW);

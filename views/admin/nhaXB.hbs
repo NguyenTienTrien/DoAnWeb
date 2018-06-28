@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nha Xuat Ban</title>
+
+    <link rel="stylesheet" href="../assets_admin/css/normalize.css">
+    <link rel="stylesheet" href="../assets_admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets_admin/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets_admin/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets_admin/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../assets_admin/css/cs-skin-elastic.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
+    <link rel="stylesheet" href="../assets_admin/scss/style.css">
+    <link href="../assets_admin/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+
+
+    <!--  Main handlebar css-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+        <!--    <link type="text/css" rel="stylesheet" href="css/bootstrap4.css"/> -->
+
+        <!-- Slick -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/slick.css"/>
+        <link type="text/css" rel="stylesheet" href="../assets/css/slick-theme.css"/>
+
+        <!-- nouislider -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/nouislider.min.css"/>
+
+        <!-- Font Awesome Icon -->
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+
+        <!-- Custom stlylesheet -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/style.css"/>
+        <link type="text/css" rel="stylesheet" href="../assets/css/style1.css">
+        <link type="text/css" rel="stylesheet" href="../assets/css/style-dropdown.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+<body>
+
+    <aside id="left-panel" class="left-panel" style="background-color:#e7e7e7">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header" style="background-color:#e7e7e7">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/home" >
+                    <img src="/images_temp/backround1.jpg" alt="Logo">
+                </a>
+                <a class="navbar-brand hidden" href="/home" >
+                    <img src="/images_temp/backround1.jpg" alt="Logo">
+                </a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse" style="background-color:#e7e7e7">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/admin/dashboard" >
+                            <i class="menu-icon {{!-- fa fa-home --}}" style="color:black"></i><span style="color:black ;font-weight: bold"><i class="fa fa-home"></i>   Dashboard </span></a>
+                    </li>
+                    <h3 class="menu-title">Quản lý</h3>
+                    <!-- /.menu-title -->
+                    <li>
+                        <a href="/admin/products">
+                            <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Sản phẩm </span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin/nhaXB">
+                            <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Nhà xuất bản</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin/loaiSach">
+                            <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Loại sản phẩm</span> </a>
+                    </li>
+
+                    <h3 class="menu-title">Đơn hàng</h3>
+                    <!-- /.menu-title -->
+
+
+                    <li>
+                        <a href="/admin/orders">
+                            <i class="menu-icon ti-email"></i><span style="color:black ;font-weight: bold">Tình trạng đơn hàng</span></a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+   
+
+    <!-- <div>Nguyễn Tiến Triển</div> -->
+    
+    <div class="row col-md-10">
+    	
+    	<div class="col-sm-12 col-md-12 col-lg-12">
+    		<p>&nbsp;</p>
+    		<h4>&nbsp; Quản lý nhà xuất bản</h4>
+    		<hr>
+
+    	</div>	
+		
+	    <div class="col-sm-12 col-md-12 col-lg-12">
+	    	<h5>Thêm NXB mới</h5>
+    		<p>&nbsp;</p>
+	    	
+	    	<form method="POST" action="/admin/themNXB" >
+				<a>Tên NXB mới:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="NXB" name="themNXB"></a>					
+				{{!-- <input class="input" placeholder="Nhập" name="searchntt"> --}}
+				<button class=" btn-outline-success my-2 my-sm-0" type="submit" >Thêm</button>
+			</form>	
+			<p><hr></p>
+   		</div>
+		<div class="col-sm-12 col-md-12 col-lg-12">
+	    	<h5>Chỉnh sửa NXB</h5>
+    		<p>&nbsp;</p>
+	    	
+	    	<form method="POST" action="/admin/suaNXB" >
+				<a>Tên NXB cũ:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="NXBcu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>					
+				<a>Tên NXB mới:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="NXBmoi"></a>					
+				
+				<button class=" btn-outline-success my-2 my-sm-0" type="submit" >Chỉnh sửa</button>
+			</form>	
+   		</div>
+	    <div class="col-sm-12 col-md-12 col-lg-12">
+	        <table class="table table-hover">
+	            <thead>
+	                <tr>
+	                    <th>Mã NXB</th>
+	                    <th>Tên NXB</th>
+	                   
+	                    <th>&nbsp;</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                {{#each nxb}}
+	                <tr>
+	                    <td>{{NXBID}}</td>
+	                    <td>{{NXBName}}</td>
+	                    <td class="text-right">
+	                    	<form method="POST" action="/admin/xoaNXB/{{NXBID}}" >
+						<a data-proid="{{NXBID}}"  href="javascript:;" role="button">
+							
+								<button class="btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-remove"></i></button>
+						</a>
+					</form>
+					</td>
+	                </tr>
+	                {{/each}}
+	            </tbody>
+	           
+	        </table>
+	    </div>
+</div>
+	
+
+
+</body>
+</html>

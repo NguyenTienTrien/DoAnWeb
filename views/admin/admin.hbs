@@ -1,15 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title></title>
+    
+    <title>Admin</title>
+
+    <link rel="stylesheet" href="../assets_admin/css/normalize.css">
+    <link rel="stylesheet" href="../assets_admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets_admin/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets_admin/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets_admin/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../assets_admin/css/cs-skin-elastic.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
+    <link rel="stylesheet" href="../assets_admin/scss/style.css">
+    <link href="../assets_admin/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+
+
+    <!--  Main handlebar css-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+		<!-- 	<link type="text/css" rel="stylesheet" href="css/bootstrap4.css"/> -->
+
+		<!-- Slick -->
+		<link type="text/css" rel="stylesheet" href="../assets/css/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="../assets/css/slick-theme.css"/>
+
+		<!-- nouislider -->
+		<link type="text/css" rel="stylesheet" href="../assets/css/nouislider.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="../assets/css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../assets/css/style1.css">
+		<link type="text/css" rel="stylesheet" href="../assets/css/style-dropdown.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
+
+
+
 <body>
-	{{#if showError}}
-<div class="alert alert-danger">
-	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<strong>Title!</strong> {{errorMsg}} ...
-</div>
-{{/if}}
-	AAAAAAAAAAAAAAAAA
+    <aside id="left-panel" class="left-panel" style="background-color:#e7e7e7">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header" style="background-color:#e7e7e7">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/home" >
+                    <img src="/images_temp/backround1.jpg" alt="Logo">
+                </a>
+                <a class="navbar-brand hidden" href="/home" >
+                    <img src="/images_temp/backround1.jpg" alt="Logo">
+                </a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse" style="background-color:#e7e7e7">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/admin/dashboard" >
+                            <i class="menu-icon {{!-- fa fa-home --}}" style="color:black"></i><span style="color:black ;font-weight: bold"><i class="fa fa-home"></i>   Dashboard </span></a>
+                    </li>
+                    <h3 class="menu-title">Quản lý</h3>
+                    <!-- /.menu-title -->
+                    <li>
+                        <a href="/admin/products">
+                            <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Sản phẩm </span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin/nhaXB">
+                            <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Nhà xuất bản</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin/loaiSach">
+                            <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Loại sách</span> </a>
+                    </li>
+
+                    <h3 class="menu-title">Đơn hàng</h3>
+                    <!-- /.menu-title -->
+
+
+                    <li>
+                        <a href="/admin/orders">
+                            <i class="menu-icon ti-email"></i><span style="color:black ;font-weight: bold">Tình trạng đơn hàng</span></a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+   
+   <div class="row">
+
+ 
+   <div class="container-fluid">
+
+            <div class="card card-container">
+                {{#each loadByProducts}}
+                    <form method="post">
+                          <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                          <label for="ProID">Mã sản phẩm</label>
+                                          <input type="text" class="form-control" id="ProID" aria-describedby="text" value="{{ProID}}">
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="Quantity">Số lượng</label>
+                                          <input type="text" class="form-control" id="ProName" value="{{Quantity}}" width="200px">
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="ProPrice">Giá sản phẩm</label>
+                                          <input type="text" class="form-control" id="ProName" value="{{Price}}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                          <label for="ProName">Tên sản phẩm</label>
+                                          <input type="text" class="form-control" id="ProName" value="{{ProName}}">
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="ProPrice">Giá sản phẩm</label>
+                                          <input type="text" class="form-control" id="ProName" value="{{Price}}">
+                                    </div>
+                                </div>
+                          </div>
+
+                          <div class="form-group">
+                                <label for="Des">Mô tả sản phẩm</label>
+                                <textarea class="form-control" row = "5" id="Des" value="{{Des}}"></textarea>
+                          </div>
+                          
+                          <button type="submit" class="btn btn-primary">Import</button>
+                    </form>
+                {{/each}}
+            </div><!-- /card-container -->
+        </div><!-- /container -->
+          </div>
+    {{!-- <div class="row"> --}}
+    <div class="row" style="margin-left:40px; margin-right: 40px; margin-top: 50px">
+        <table class="table">
+            <thead class="">
+                <tr>
+                    <th scope="col">Mã sản phẩm</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Loại sản phẩm</th>
+                    <th scope="col">Nhà sản xuất</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Giá bán</th>
+                    <th scope="col">Lượt bán</th>
+                    <th scope="col">Lượt xem</th>
+                    <th scope="col">Ngày thêm</th>
+                    <th scope="col">Quản lý</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each Item}}
+                <tr>
+                    <td>{{ProID}}</td>
+                    <td>{{ProName}}</td>    
+                    <td>{{CatName}}</td>
+                    <td>{{ProduName}}</td>
+                    <td>{{Quantity}}</td>
+                    <td>{{Price}}</td>
+                    <td>{{Sales}}</td>
+                    <td>{{Views}}</td>
+                    <td>{{AddDate}}</td>
+                    <td>
+                        <form action="/add" method="get">
+                        <input type="submit" value="+">
+                        </form>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{!-- </div> --}}
+    {{!-- <div class="row">
+    	<div class="col-md-12 col-xs-12">
+    		<div class="store-filter clearfix">
+
+    			<ul class="store-pagination">
+    			{{#each page_numbers}}
+    			{{#if isCurPage}}
+    				<li class="active"><a href="javascript:;">{{value}}</a></li>
+    			{{else}}
+    				<li><a href="?page={{value}}">{{value}}</a></li>
+    			{{/if}}
+    			{{/each}}
+    				<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    </div> --}}
 </body>
-</html>
