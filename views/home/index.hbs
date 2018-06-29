@@ -1,7 +1,70 @@
 {{#section 'title'}}
     Danh Sách Nổi Bật
 {{/section}}
-<h4>Bán Chạy Nhất</h4>
+<div class="row"
+<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-3">
+									<h1><span>Rộn Ràng SALE</span></h1>
+									<h2>Ngày 20/06/2018 - 25/06/2018</h2>
+									<p>Sale tất cả sản phẩm tại của hàng. Up to 65%</p>
+									
+								</div>
+								<div class="col-sm-9">
+									<img src="images_temp/sale.jpg"  alt =" tri thuc" width="500"  height="473" > 
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-3">
+
+									<h1><span></span>EVENT MEMBER VIP</h1>
+									<h2>Tri Ân Thành Viên</h2>
+									<p> Từ ngày 30/06/2018 - 31/07/2018 tặng quà cho hóa đơn 500000 VND</p>
+									
+								</div>
+								<div class="col-sm-9">
+									<img src="images_temp/gif.jpg" width="500" height="473">
+								</div>
+							</div>
+
+
+								  	
+							
+							<div class="item">
+								<div class="col-sm-3 ">
+									<h1><span>Sách</span>-Tiểu Thuyết</h1>
+									<h2>Đưa Thế Giới Lại Gần Hơn</h2>
+									<button class="btn btn-default" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Mua ngay</button>
+									
+								</div>
+								<div class="col-sm-9">
+									<img src="images_temp/trithuc2.jpg" width="500" height="473">
+								</div>
+							</div>
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+</div>
+</div>
+
+
+
 </br>
 
 
@@ -16,6 +79,8 @@
 </script>
 {{/section}}
 
+
+
 {{#if noProducts}}
 <div class="row">
 	<div class="col-sm-12 col-md-12 col-lg-12">
@@ -23,49 +88,65 @@
 	</div>
 </div>
 {{else}}
-<div class="row">
+</br>
+</br>
+<h2 class="title text-center">Bán Chạy Nhất</h2>
+<div class="row features_items">
 	<form id="frmAddItem" method="post" action="/cart/add">
 		<input type="hidden" name="proId" id="txtP">
 		<input type="hidden" name="quantity" id="txtQ">
 	</form>
 	{{#each products}}
 	<div class="col-sm-6 col-md-4">
-		<div class="thumbnail">
-			<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
-			<div class="caption">
-				<h4>{{ProName}}</h4>
-				<h4>{{number_format Price}}</h4>
-				
-				<p>Số lượng đã bán: {{SoLuongDaBan}} </p>
+		<div class="product-image-wrapper">
+			<div class="single-products">
+				<div class="productinfo text-center">
+					<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}} alt="Ảnh Sách Bán Theo Loại" />
+						<h4>{{ProName}}</h4>
+						<h4>{{number_format Price}}</h4>
+						
+						<p>Số lượng đã bán: {{SoLuongDaBan}} </p>
 
-				<p style="height: 60px">{{TinyDes}}</p>
+						<p style="height: 60px">{{TinyDes}}</p>
+						<p>
+							<a href="/product/detail/{{ProID}}" class="btn btn-primary">
+								<span class="fa fa-eye"></span>
+								View Details
+							</a>
+							{{#if ../layoutVM.isLogged}}
+							<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+								<span class="fa fa-shopping-cart"></span>
+								Add
+							</a>
+							{{/if}}
+						</p>
 
-				<p>
-					<a href="/product/detail/{{ProID}}" class="btn btn-primary">
-						<span class="fa fa-eye"></span>
-						View Details
-					</a>
-					{{#if ../layoutVM.isLogged}}
-					<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
-						<span class="fa fa-shopping-cart"></span>
-						Add
-					</a>
-					{{/if}}
-				</p>
+
+				</div>
 			</div>
+		<div class="choose">
+			<ul class="nav nav-pills nav-justified">
+				
+				<li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
+			</ul>
 		</div>
+	</div>	
 	</div>
 	{{/each}}
 </div>
 
 {{/if}}
-<a href="/product/BanChay"><i class="fa fa-eye"></i>  Xem thêm</a>	
+
+<div class="pager">
+	<button type="button" ><a href="/product/BanChay"><i class="fa fa-eye"></i>  Xem thêm</a></button>	
+</div>
+	
 
 {{!-- 
  --}}
 <hr/>
 </br>
-<h4>Sách được xem nhiều</h4>
+<h2 class="title text-center">Xem Nhiều Nhất</h2>
 
 
 {{#if noProducts2}}
@@ -82,40 +163,51 @@
 	</form>
 	{{#each products2}}
 	<div class="col-sm-6 col-md-4">
-		<div class="thumbnail">
-			<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
-			<div class="caption">
-				<h4>{{ProName}}</h4>
-				<h4>{{number_format Price}}</h4>
-				
-				<p>Số lượt xem: {{SoLuotXem}} </p>
+		<div class="product-image-wrapper">
+			<div class="single-products">
+				<div class="productinfo text-center">
+					<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}} alt="Ảnh Sách Bán Theo Loại" />
+						<h4>{{ProName}}</h4>
+						<h4>{{number_format Price}}</h4>
+						
+						<p>Số Lượt Xem: {{SoLuotXem}} </p>
 
-				<p style="height: 60px">{{TinyDes}}</p>
+						<p style="height: 60px">{{TinyDes}}</p>
+						<p>
+							<a href="/product/detail/{{ProID}}" class="btn btn-primary">
+								<span class="fa fa-eye"></span>
+								View Details
+							</a>
+							{{#if ../layoutVM.isLogged}}
+							<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+								<span class="fa fa-shopping-cart"></span>
+								Add
+							</a>
+							{{/if}}
+						</p>
 
-				<p>
-					<a href="/product/detail/{{ProID}}" class="btn btn-primary">
-						<span class="fa fa-eye"></span>
-						View Details
-					</a>
-					{{#if ../layoutVM.isLogged}}
-					<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
-						<span class="fa fa-shopping-cart"></span>
-						Add
-					</a>
-					{{/if}}
-				</p>
+
+				</div>
 			</div>
+		<div class="choose">
+			<ul class="nav nav-pills nav-justified">
+				
+				<li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
+			</ul>
 		</div>
+	</div>	
 	</div>
 	{{/each}}
 </div>
 
 {{/if}}
-<a href="/product/XemNhieu"><i class="fa fa-eye"></i>  Xem thêm</a>	
+<div class="pager">
+	<button type="button" ><a href="/product/XemNhieu"><i class="fa fa-eye"></i>  Xem thêm</a></button>	
+</div>
 {{!--  --}}
 <hr/>
 </br>
-<h4>Sách mới phát hành</h4>
+<h2 class="title text-center">Mới Phát Hành</h2>
 
 
 {{#if noProducts3}}
@@ -132,36 +224,48 @@
 	</form>
 	{{#each products3}}
 	<div class="col-sm-6 col-md-4">
-		<div class="thumbnail">
-			<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
-			<div class="caption">
-				<h4>{{ProName}}</h4>
-				<h4>{{number_format Price}}</h4>
-				
-				<p>Ngày phát hành: {{DateDangTai}} </p>
+		<div class="product-image-wrapper">
+			<div class="single-products">
+				<div class="productinfo text-center">
+					<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}} alt="Ảnh Sách Bán Theo Loại" />
+						<h4>{{ProName}}</h4>
+						<h4>{{number_format Price}}</h4>
+						
+						<p>Ngày đăng tải: {{DateDangTai}} </p>
 
-				<p style="height: 60px">{{TinyDes}}</p>
+						<p style="height: 60px">{{TinyDes}}</p>
+						<p>
+							<a href="/product/detail/{{ProID}}" class="btn btn-primary">
+								<span class="fa fa-eye"></span>
+								View Details
+							</a>
+							{{#if ../layoutVM.isLogged}}
+							<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+								<span class="fa fa-shopping-cart"></span>
+								Add
+							</a>
+							{{/if}}
+						</p>
 
-				<p>
-					<a href="/product/detail/{{ProID}}" class="btn btn-primary">
-						<span class="fa fa-eye"></span>
-						View Details
-					</a>
-					{{#if ../layoutVM.isLogged}}
-					<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
-						<span class="fa fa-shopping-cart"></span>
-						Add
-					</a>
-					{{/if}}
-				</p>
+
+				</div>
 			</div>
+		<div class="choose">
+			<ul class="nav nav-pills nav-justified">
+				
+				<li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
+			</ul>
 		</div>
+	</div>	
 	</div>
 	{{/each}}
 </div>
 
 {{/if}}
-<a href="/product/MoiPhatHanh"><i class="fa fa-eye"></i>  Xem thêm</a>	
+<div class="pager">
+	<button type="button" ><a href="/product/MoiPhatHanh"><i class="fa fa-eye"></i>  Xem thêm</a></button>	
+</div>
+	
 
 
 

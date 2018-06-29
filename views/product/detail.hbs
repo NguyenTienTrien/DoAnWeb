@@ -3,56 +3,90 @@
 {{/section}}
 
 {{#with product}}
-<div class="row">
-    <div class="col-md-12">
-        <img src="/images/{{ProID}}/main_images.jpg" />    <!--sua dia chi -->
-    </div>
-    <div class="col-md-12 caption-lg-orange">
-        <h3>{{ProName}}</h3>
-    </div>
-   {{!--  <div class="col-md-12 padding">
-        <span class="caption-lg-red">tác giả: {{TinyDes}}</span>
-    </div> --}}
-    <div class="col-md-12 padding">
-        <span class="caption-lg-red">Giá bán: {{number_format Price}}</span>
-    </div>
-    <div class="col-md-12 padding">
-        Tồn kho: {{Quantity}}
-    </div>
-   {{!--   <div class="col-md-12 padding">
-        Ngày đăng tải: {{DateDangTai}}
-    </div> --}}
-    <div class="col-md-12 padding">
-        Số lượng đã bán: {{SoLuongDaBan}}
-    </div>
-    <div class="col-md-12 padding">
-        Số lượt xem: {{SoLuotXem}}
-    </div>
-    <div class="col-md-12 padding">
-        {{{FullDes}}}
-    </div>
-   
-</div>
-{{/with}}
 
-{{#if layoutVM.isLogged}}
-<form class="form-horizontal" id="frmAddItem" method="post" action="/cart/add">
-    <div class="form-group">
+<div class="container">
         <div class="col-sm-4">
-            <div class="input-group" style="margin-left: 24px;">
-                <input name="proId" type="hidden" value="{{product.ProID}}">
-                <input name="quantity" type="text" class="form-control" placeholder="Slg" value="1">
-                <span class="input-group-btn">
-                    <button class="btn btn-primary" type="submit">
-                        <span class="fa fa-plus"></span>
-                        Add
-                    </button>
-                </span>
-            </div>
+            <img class="anhsp2" src="/images/{{ProID}}/main_images.jpg" width="300" height="600">
+
         </div>
+        <div class="col-sm-4 spAAA">
+            <br>
+            <br>
+
+            <p class="spDDD">Thông tin chi tiết sản phẩm</p>
+            <h4>{{ProName}}</h4>
+            <p>Tác giả: <a href="https://vi.wikipedia.org/wiki/Nam_Cao">{{TinyDes}}</a></p>
+            <p>
+                {{{FullDes}}}
+            </p>
+            <p>
+                Tồn kho: {{Quantity}}
+            </p>
+            </br>
+            <p>
+                Ngày đăng tải: {{DateDangTai}}
+            </p>
+            
+            <p>
+                Số lượng đã bán: {{SoLuongDaBan}}
+            
+            <p>
+            
+            <p>
+                Số lượt xem: {{SoLuotXem}}
+            </p>
+            
+           
+        </div>
+        <div class="col-sm-3">
+            <br>
+            <br>
+            <div class="spBBB">
+                <div class="spCCC">Thông tin Giá</div>
+                <hr>
+                <div>Giá bán: &nbsp;&nbsp;&nbsp;&nbsp;<span class="giaban"> <h4>{{number_format Price}}  VND</h4></span> </div>
+                
+                <div>Chất lượng sách: &nbsp;&nbsp;&nbsp;&nbsp;Loại A</div>
+                <div>
+                    Đánh giá: &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <hr>
+                <div class="benphai tietkiem"><i class="fa fa-check-circle"></i>Có hàng</div><br>
+                {{/with}}
+                {{#if layoutVM.isLogged}}
+                    <form class="form-horizontal" id="frmAddItem" method="post" action="/cart/add">
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <div class="input-group" style="margin-left: 24px;">
+                                    <input name="proId" type="hidden" value="{{product.ProID}}">
+                                    <input name="quantity" type="text" class="form-control" placeholder="Slg" value="1">
+                                        <button class="btn btn-primary"  type="submit">
+                                            <span class="fa fa-plus"></span>
+                                            ADDS
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                {{/if}}
+            </div>
+           
+        </div>
+
     </div>
-</form>
-{{/if}}
+
+
+
+
+
+
+
 
 
 
@@ -76,29 +110,39 @@
     </form>
     {{#each CungLoaiSP}}
     <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
-            <div class="caption">
-                <h4>{{ProName}}</h4>
-                <h4>{{number_format Price}}</h4>
-                
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">     
+                        <h4>{{ProName}}</h4>
+                        <h4>{{number_format Price}}</h4>
+                        
+                        <p>Số lượng đã bán: {{SoLuongDaBan}} </p>
 
-                <p style="height: 60px">{{TinyDes}}</p>
+                        <p style="height: 60px">{{TinyDes}}</p>
+                        <p>
+                            <a href="/product/detail/{{ProID}}" class="btn btn-primary">
+                                <span class="fa fa-eye"></span>
+                                View Details
+                            </a>
+                            {{#if ../layoutVM.isLogged}}
+                            <a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+                                <span class="fa fa-shopping-cart"></span>
+                                Add
+                            </a>
+                            {{/if}}
+                        </p>
 
-                <p>
-                    <a href="/product/detail/{{ProID}}" class="btn btn-primary">
-                        <span class="fa fa-eye"></span>
-                        View Details
-                    </a>
-                    {{#if ../layoutVM.isLogged}}
-                    <a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
-                        <span class="fa fa-shopping-cart"></span>
-                        Add
-                    </a>
-                    {{/if}}
-                </p>
+
+                </div>
             </div>
+        <div class="choose">
+            <ul class="nav nav-pills nav-justified">
+                
+                <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
+            </ul>
         </div>
+    </div>  
     </div>
     {{/each}}
 </div>
@@ -121,29 +165,39 @@
     </form>
     {{#each CungNXB}}
     <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
-            <div class="caption">
-                <h4>{{ProName}}</h4>
-                <h4>{{number_format Price}}</h4>
-                
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">
+                        <h4>{{ProName}}</h4>
+                        <h4>{{number_format Price}}</h4>
+                        
+                        <p>Số lượng đã bán: {{SoLuongDaBan}} </p>
 
-                <p style="height: 60px">{{TinyDes}}</p>
+                        <p style="height: 60px">{{TinyDes}}</p>
+                        <p>
+                            <a href="/product/detail/{{ProID}}" class="btn btn-primary">
+                                <span class="fa fa-eye"></span>
+                                View Details
+                            </a>
+                            {{#if ../layoutVM.isLogged}}
+                            <a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+                                <span class="fa fa-shopping-cart"></span>
+                                Add
+                            </a>
+                            {{/if}}
+                        </p>
 
-                <p>
-                    <a href="/product/detail/{{ProID}}" class="btn btn-primary">
-                        <span class="fa fa-eye"></span>
-                        View Details
-                    </a>
-                    {{#if ../layoutVM.isLogged}}
-                    <a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
-                        <span class="fa fa-shopping-cart"></span>
-                        Add
-                    </a>
-                    {{/if}}
-                </p>
+
+                </div>
             </div>
+        <div class="choose">
+            <ul class="nav nav-pills nav-justified">
+                
+                <li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
+            </ul>
         </div>
+    </div>  
     </div>
     {{/each}}
 </div>
