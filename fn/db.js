@@ -7,7 +7,8 @@ exports.load = sql => {
             port: 3306,
             user: 'root',
             password: '123456',
-            database: 'qlbh'
+            database: 'qlbh',
+            dateStrings: true
         });
 
         cn.connect();

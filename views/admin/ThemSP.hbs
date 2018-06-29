@@ -99,67 +99,32 @@
     <!-- <div>Nguyễn Tiến Triển</div> -->
     
     <div class="row col-md-10">
-    	
-    	<div class="col-sm-12 col-md-12 col-lg-12">
-    		<p>&nbsp;</p>
-    		<h4>&nbsp; Quản lý nhà xuất bản</h4>
-    		<hr>
+        
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <p>&nbsp;</p>
+            <h4>&nbsp; Thêm sản phẩm vào hệ thống</h4>
+            <hr>
 
-    	</div>	
-		
-	    <div class="col-sm-12 col-md-12 col-lg-12">
-	    	<h5>Thêm Loại Sách</h5>
-    		<p>&nbsp;</p>
-	    	
-	    	<form method="POST" action="/admin/themLoai" >
-				<a>Tên Loại mới:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="loai" name="themNXB"></a>					
-				{{!-- <input class="input" placeholder="Nhập" name="searchntt"> --}}
-				<button class=" btn-outline-success my-2 my-sm-0" type="submit" >Thêm</button>
-			</form>	
-			<p><hr></p>
-   		</div>
-		<div class="col-sm-12 col-md-12 col-lg-12">
-	    	<h5>Chỉnh sửa loại sách</h5>
-    		<p>&nbsp;</p>
-	    	
-	    	<form method="POST" action="/admin/suaLoai" >
-				<a>Tên loại cũ:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="NXBcu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>					
-				<a>Tên loại mới:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="NXBmoi"></a>					
-				
-				<button class=" btn-outline-success my-2 my-sm-0" type="submit" >Chỉnh sửa</button>
-			</form>	
-   		</div>
-	    <div class="col-sm-12 col-md-12 col-lg-12">
-	        <table class="table table-hover">
-	            <thead>
-	                <tr>
-	                    <th>Mã Loại</th>
-	                    <th>Tên Loại</th>
-	                   
-	                    <th>&nbsp;</th>
-	                </tr>
-	            </thead>
-	            <tbody>
-	               {{#each sach}}
-	                <tr>
-	                    <td>{{CatID}}</td>
-	                    <td>{{CatName}}</td>
-	                    <td class="text-right">
-	                    	<form method="POST" action="/admin/xoaLoai/{{CatID}}" >
-						<a data-proid="{{CatID}}"  href="javascript:;" role="button">
-							
-								<button class="btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-remove"></i></button>
-						</a>
-					</form>
-					</td>
-	                </tr>
-	                {{/each}}
-	            </tbody>
-	           
-	        </table>
-	    </div>
+        </div>  
+        
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            
+            
+            <form method="POST" action="/admin/themsanpham" >
+                <a>Tên sách:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="tenSach"></a> </br></br>
+                <a>Tên giả:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="tacGia"></a>   </br>   </br>                
+                <a>Mô tả:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="moTa"></a>   </br>   </br>                
+                <a>Giá bán:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="giaBan"></a>   </br> </br>                  
+                <a>Số lượng:&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="soLuong"></a>  </br>   </br>                 
+                
+            
+            <button class=" btn-outline-success my-2 my-sm-0" type="submit" >Thêm</button>
+           </form> 
+        </div>
+        
+        
 </div>
-	
+    
 
 
 </body>

@@ -98,7 +98,7 @@
 
     <!-- <div>Nguyễn Tiến Triển</div> -->
     
-    <div class="row col-md-10">
+    <div class="row col-md-12">
     	
     	<div class="col-sm-12 col-md-12 col-lg-12">
     		<p>&nbsp;</p>
@@ -111,47 +111,62 @@
 	    	<h5>Thêm Loại Sách</h5>
     		<p>&nbsp;</p>
 	    	
-	    	<form method="POST" action="/admin/themLoai" >
-				<a>Tên Loại mới:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="loai" name="themNXB"></a>					
+	    	<form method="POST" action="/admin/themSP" >
+				<a>Tên sách mới:&nbsp;&nbsp;&nbsp;&nbsp; {{!-- <input class="input" placeholder="loai" name="themNXB"> --}}</a>					
 				{{!-- <input class="input" placeholder="Nhập" name="searchntt"> --}}
 				<button class=" btn-outline-success my-2 my-sm-0" type="submit" >Thêm</button>
 			</form>	
 			<p><hr></p>
    		</div>
-		<div class="col-sm-12 col-md-12 col-lg-12">
-	    	<h5>Chỉnh sửa loại sách</h5>
-    		<p>&nbsp;</p>
-	    	
-	    	<form method="POST" action="/admin/suaLoai" >
-				<a>Tên loại cũ:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="NXBcu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>					
-				<a>Tên loại mới:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="NXBmoi"></a>					
-				
-				<button class=" btn-outline-success my-2 my-sm-0" type="submit" >Chỉnh sửa</button>
-			</form>	
-   		</div>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <form method="POST" action="/admin/TimKiemSP" >
+                <a>Tìm kiếm sản phẩm:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="ten" name="TimKiemSP"></a>                 
+                {{!-- <input class="input" placeholder="Nhập" name="searchntt"> --}}
+                <button class=" btn-outline-success my-2 my-sm-0" type="submit" >Tìm kiếm</button>
+            </form> 
+	   </div>
+
 	    <div class="col-sm-12 col-md-12 col-lg-12">
 	        <table class="table table-hover">
 	            <thead>
 	                <tr>
-	                    <th>Mã Loại</th>
-	                    <th>Tên Loại</th>
-	                   
+	                    <th>Tên sách</th>
+	                    
+	                    <th>Tác giả</th>
+	                   	<th>Giá bán</th>
+	                   	<th>Tồn kho</th>
+	                   	<th>Số lượng bán</th>
+	                   	<th>Lượt xem</th>
 	                    <th>&nbsp;</th>
 	                </tr>
 	            </thead>
 	            <tbody>
-	               {{#each sach}}
+	               {{#each sanPham}}
 	                <tr>
-	                    <td>{{CatID}}</td>
-	                    <td>{{CatName}}</td>
+	                    <td>{{ProName}}</td>
+	                    <td>{{TinyDes}}</td>
+	                    <td>{{Price}}</td>
+	                    <td>{{Quantity}}</td>
+	                    <td>{{SoLuongDaBan}}</td>
+	                    <td>{{SoLuotXem}}</td>
+
 	                    <td class="text-right">
-	                    	<form method="POST" action="/admin/xoaLoai/{{CatID}}" >
-						<a data-proid="{{CatID}}"  href="javascript:;" role="button">
-							
-								<button class="btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-remove"></i></button>
-						</a>
-					</form>
-					</td>
+	                    	<form method="POST" action="/admin/suaSP/{{ProID}}" >
+								<a data-proid="{{ProID}}"  href="javascript:;" role="button">
+									
+										<button class="btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-edit"></i></button>
+								</a>
+							</form>
+						</td>
+
+	                    <td class="text-right">
+	                    	<form method="POST" action="/admin/xoaSP/{{ProID}}" >
+								<a data-proid="{{ProID}}"  href="javascript:;" role="button">
+									
+										<button class="btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-remove"></i></button>
+								</a>
+							</form>
+						</td>
 	                </tr>
 	                {{/each}}
 	            </tbody>

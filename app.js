@@ -6,6 +6,7 @@ var path = require('path');
 var wnumb = require('wnumb');
 var session = require('express-session');
 
+
 var handleLayoutMDW = require('./middle_wares/handleLayout');
 var handle404MDW = require('./middle_wares/handle404');
 var restrict = require('./middle_wares/restrict');
@@ -74,6 +75,6 @@ app.use('/admin',adminController);
 
 app.use(handle404MDW);
 
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log('server running on port 4000');
 });

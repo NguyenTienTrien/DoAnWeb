@@ -1,0 +1,116 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nha Xuat Ban</title>
+
+    <link rel="stylesheet" href="../assets_admin/css/normalize.css">
+    <link rel="stylesheet" href="../assets_admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets_admin/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets_admin/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets_admin/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../assets_admin/css/cs-skin-elastic.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
+    <link rel="stylesheet" href="../assets_admin/scss/style.css">
+    <link href="../assets_admin/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+
+
+    <!--  Main handlebar css-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+        <!--    <link type="text/css" rel="stylesheet" href="css/bootstrap4.css"/> -->
+
+        <!-- Slick -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/slick.css"/>
+        <link type="text/css" rel="stylesheet" href="../assets/css/slick-theme.css"/>
+
+        <!-- nouislider -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/nouislider.min.css"/>
+
+        <!-- Font Awesome Icon -->
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+
+        <!-- Custom stlylesheet -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/style.css"/>
+        <link type="text/css" rel="stylesheet" href="../assets/css/style1.css">
+        <link type="text/css" rel="stylesheet" href="../assets/css/style-dropdown.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+<body>
+
+   
+   
+
+    <!-- <div>Nguyễn Tiến Triển</div> -->
+    
+    <div class="row col-md-10">
+        
+      
+        
+        
+</div>
+    
+
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sua SP</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+
+
+    <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Chỉnh sửa</div>
+                      
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                           {{#each sanPham}}
+                          <div class="col-sm-12 col-md-12 col-lg-12">
+                              <p>&nbsp;</p>
+                              <h4>&nbsp; Chỉnh sửa sản phẩm: {{ProName}}</h4>
+                              <hr>
+
+                          </div>  
+                          
+                          <div class="col-sm-12 col-md-12 col-lg-12">
+                              
+                              
+                              <form method="POST" action="/admin/suaSP2/{{ProID}}" >
+                                  <a>Tên sách:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="tenSach"></a> </br></br>
+                                  <a>Tên giả:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="tacGia"></a>   </br>   </br>                
+                                  <a>Giá bán:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="giaBan"></a>   </br> </br>                  
+                                  <a>Số lượng:&nbsp;&nbsp;&nbsp;&nbsp; <input class="input" placeholder="" name="soLuong"></a>  </br>   </br>                 
+                                  
+                             
+                              <button class=" btn-outline-success my-2 my-sm-0" type="submit" >Cập nhât</button>
+                               </form> 
+                             
+                          </div>
+                          {{/each}}                   
+                    </div>  
+        </div>
+
+
+</body>
+</html>
+

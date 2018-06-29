@@ -54,7 +54,8 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="/home" >
-                    <img src="/images_temp/backround1.jpg" alt="Logo">
+                   {{!--  <img src="/images_temp/backround1.jpg" alt="Logo"> --}}
+                    <p>Đăng Xuất</p>
                 </a>
                 <a class="navbar-brand hidden" href="/home" >
                     <img src="/images_temp/backround1.jpg" alt="Logo">
@@ -70,7 +71,7 @@
                     <h3 class="menu-title">Quản lý</h3>
                     <!-- /.menu-title -->
                     <li>
-                        <a href="/admin/products">
+                        <a href="/admin/SanPham">
                             <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Sản phẩm </span> </a>
                     </li>
                     <li>
@@ -79,7 +80,7 @@
                     </li>
                     <li>
                         <a href="/admin/loaiSach">
-                            <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Loại sách</span> </a>
+                            <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Loại sản phẩm</span> </a>
                     </li>
 
                     <h3 class="menu-title">Đơn hàng</h3>
@@ -104,7 +105,7 @@
    <div class="container-fluid">
 
             <div class="card card-container">
-                {{#each loadByProducts}}
+               {{!--  {{#each loadByProducts}}
                     <form method="post">
                           <div class="row">
                                 <div class="col-lg-6">
@@ -140,12 +141,18 @@
                           
                           <button type="submit" class="btn btn-primary">Import</button>
                     </form>
-                {{/each}}
+                {{/each}} --}}
+                <div class="col-sm-12 col-md-12 col-lg-12" style="color: green">
+                        <p>&nbsp;</p>
+                        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHÀO MỪNG ĐẾN VỚI ZERO4BOOK</h3>
+                        <hr>
+
+                    </div>  
             </div><!-- /card-container -->
         </div><!-- /container -->
           </div>
     {{!-- <div class="row"> --}}
-    <div class="row" style="margin-left:40px; margin-right: 40px; margin-top: 50px">
+   {{!--  <div class="row" style="margin-left:40px; margin-right: 40px; margin-top: 50px">
         <table class="table">
             <thead class="">
                 <tr>
@@ -182,7 +189,7 @@
                 {{/each}}
             </tbody>
         </table>
-    </div>
+    </div> --}}
     {{!-- </div> --}}
     {{!-- <div class="row">
     	<div class="col-md-12 col-xs-12">

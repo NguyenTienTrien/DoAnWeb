@@ -27,29 +27,45 @@
 	</form>
 	{{#each products}}
 	<div class="col-sm-6 col-md-4">
-		<div class="thumbnail">
-			<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">  <!--sua dia chi -->
-			<div class="caption">
-				<h4>{{ProName}}</h4>
-				<h4>{{number_format Price}}</h4>
-				<p style="height: 60px">{{TinyDes}}</p>
-				<p>
-					<a href="/product/detail/{{ProID}}" class="btn btn-primary">
-						<span class="fa fa-eye"></span>
-						View Details
-					</a>
-					{{#if ../layoutVM.isLogged}}
-					<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
-						<span class="fa fa-shopping-cart"></span>
-						Add
-					</a>
-					{{/if}}
-				</p>
+
+		<div class="product-image-wrapper">
+			<div class="single-products">
+				<div class="productinfo text-center">
+					<img src="/images/{{ProID}}/main_images.jpg" alt="{{ProName}}" title="{{ProName}}">
+						<h4>{{ProName}}</h4>
+						<h4>{{number_format Price}}</h4>
+						<p style="height: 60px">{{TinyDes}}</p>
+						<p>
+							<a href="/product/detail/{{ProID}}" class="btn btn-primary">
+								<span class="fa fa-eye"></span>
+								View Details
+							</a>
+							{{#if ../layoutVM.isLogged}}
+							<a data-proid="{{ProID}}" href="javascript:;" class="btn btn-primary addItem"{{!-- class="btn btn-default addItem" --}}>
+								<span class="fa fa-shopping-cart"></span>
+								Add
+							</a>
+							{{/if}}
+						</p>
+
+
+				</div>
 			</div>
+		<div class="choose">
+			<ul class="nav nav-pills nav-justified">
+				<li><a href="sanpham.html"><em class="fa fa-location-arrow "></em> Xem chi tiết </a></li>
+				<li><a href="#"><i class="fa fa-plus-square "></i>Đánh Giá </a></li>
+			</ul>
 		</div>
-	</div>
+	</div>	
+
+
+
+</div>
+		
 	{{/each}}
 </div>
+<div class="pager">
 <ul class="pagination">
 	<li><a href="#">&laquo;</a></li>
 	{{#each page_numbers}}
@@ -61,4 +77,5 @@
 	{{/each}}
 	<li><a href="#">&raquo;</a></li>
 </ul>
+</div>
 {{/if}}

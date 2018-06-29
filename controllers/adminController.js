@@ -108,7 +108,7 @@ router.post('/themLoai',(req,res)=>{
 
 router.post('/suaLoai',(req,res)=>{
     var nameL=req.body.NXBcu;
-    var nameN=req.body.NXBmoi
+    var nameN=req.body.NXBmoi;
     var vm={
         nxbcu: nameL,
         nxbmoi: nameN,
@@ -129,3 +129,131 @@ router.post('/xoaLoai/:id',(req,res)=>{
 });
 
 module.exports = router;
+
+//sản phẩm
+router.get('/SanPham',(req,res)=>{
+    var p1=adminRepo.sanPham();
+    // res.render('admin/nhaXB',{layout: false});
+
+
+    Promise.all([p1]).then(([rows]) => {
+
+        var vm = {
+            sanPham: rows,
+            layout: false
+        };     
+        res.render('admin/SanPham',vm);
+    });
+});
+
+router.post('/xoaSP/:id',(req,res)=>{
+     var  idNXB=req.params.id;
+    var p1=adminRepo.xoaSP(idNXB);
+    // res.render('admin/nhaXB',{layout: false});
+            res.redirect('/admin/SanPham');
+    
+});
+
+//them sp
+router.post('/themSP',(req,res)=>{
+       
+        res.render('admin/ThemSP',{layout: false});
+
+});
+
+router.post('/themsanpham',(req,res)=>{
+       
+    var dulieu={
+        nameSP: req.body.tenSach,
+        nameTG: req.body.tacGia,
+        moTa: req.body.moTa,
+        gia: req.body.giaBan,
+        soLuong: req.body.soLuong
+        
+    };
+        var p1=adminRepo.themsanpham(dulieu);
+    // res.render('admin/nhaXB',{layout: false});
+            res.redirect('/admin/SanPham');
+
+});
+
+
+
+router.post('/suaSP/:id',(req,res)=>{
+       
+        var  proID=req.params.id;
+        var p1=adminRepo.sin(proID);
+        Promise.all([p1]).then(([rows]) => {
+
+        var vm = {
+            sanPham: rows,
+            layout: false
+        };     
+        res.render('admin/suaSP',vm);
+    });
+    
+});
+
+router.post('/suaSP2/:idSP',(req,res)=>{
+       
+        var SPham = req.params.idSP;
+        var dulieu={
+            MaSP: SPham,
+            nameSP: req.body.tenSach,
+            nameTG: req.body.tacGia,
+            gia: req.body.giaBan,
+            soLuong: req.body.soLuong
+            
+        };
+        var p1=adminRepo.ChinhSuaSP(dulieu);
+            res.redirect('/admin/SanPham');
+    
+});
+
+router.post('/TimKiemSP',(req,res)=>{
+    var name=req.body.TimKiemSP;
+    var p1=adminRepo.TimKiemTenSP(name);
+        Promise.all([p1]).then(([rows]) => {
+
+        var vm = {
+            sanPham: rows,
+            layout: false
+        };     
+        res.render('admin/SanPham',vm);
+    });
+            
+    
+});
+
+
+//quản lý đơn hàng
+router.get('/orders',(req,res)=>{
+    var p1=adminRepo.LoadDonHanglan1();
+    // res.render('admin/nhaXB',{layout: false});
+
+
+    Promise.all([p1]).then(([rows]) => {
+
+        var vm = {
+            HoaDon: rows,
+            layout: false
+        };     
+        res.render('admin/DonHang',vm);
+    });
+});
+
+router.post('/orders/:id',(req,res)=>{
+        var  idHoaDon=req.params.id;
+        var p1=adminRepo.ThayDoiStatus(idHoaDon);
+            res.redirect('/admin/orders');
+       
+
+});
+
+router.post('/orders2/:id',(req,res)=>{
+        var  idHoaDon=req.params.id;
+        var p1=adminRepo.ThayDoiStatus2(idHoaDon);
+            res.redirect('/admin/orders');
+       
+
+});
